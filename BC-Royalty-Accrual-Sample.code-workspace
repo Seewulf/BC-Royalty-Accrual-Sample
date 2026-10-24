@@ -1,0 +1,12 @@
+{
+  "folders": [
+    { "path": "app", "name": "Royalty Accrual Sample" },
+    { "path": "test", "name": "Royalty Accrual Sample Tests" }
+  ],
+  "settings": {
+    "al.enableCodeAnalysis": true,
+    "al.codeAnalyzers": [ "${CodeCop}", "${PerTenantExtensionCop}", "${UICop}" ],
+    "editor.formatOnSave": true,
+    "files.exclude": { "**/.alpackages": true, "**/.alcache": true }
+  }
+}

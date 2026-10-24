@@ -1,0 +1,28 @@
+{
+  "id": "df11d72a-db7d-4504-bb5b-a70208a06ce2",
+  "name": "Royalty Accrual Sample",
+  "publisher": "Prabin Bhusal",
+  "version": "1.0.0.0",
+  "brief": "Sample: royalty calculation from posted sales, frozen statements, preview-then-post accrual.",
+  "description": "Demonstration extension for a licensed-merchandise royalty process in Business Central: contract setup, idempotent royalty ledger calculated from posted sales and credits, minimum-guarantee recoupment, statement approval with audit trail, and accrual journal creation for preview before posting.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "https://github.com/Seewulf/BC-Royalty-Accrual-Sample",
+  "url": "https://github.com/Seewulf/BC-Royalty-Accrual-Sample",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "29.0.0.0",
+  "idRanges": [
+    { "from": 50100, "to": 50149 }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "18.0",
+  "target": "Cloud",
+  "features": [ "NoImplicitWith", "TranslationFile" ]
+}
