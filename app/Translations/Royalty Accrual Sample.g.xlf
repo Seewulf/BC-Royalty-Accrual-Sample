@@ -1,0 +1,869 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Royalty Accrual Sample">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 2116767035 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Contract</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - NamedType 3567035175" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contract %1 has royalty ledger entries and cannot be deleted.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = contract no.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - NamedType HasEntriesErr</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 2417552483 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the recoupable advance (minimum guarantee) paid to the licensor. Royalties earned are offset against it before anything becomes payable.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Advance Amount (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 2417552483 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Advance Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Advance Amount (LCY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 3543129988 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that no new royalty entries are created for this contract.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Blocked - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 3543129988 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blocked</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Blocked - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies what the contract covers.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 458406397 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the last posting date that the contract applies to. Leave blank for no end date.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Ending Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 458406397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ending Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Ending Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 794363632 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the vendor that receives the royalty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Licensor No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 794363632 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Licensor No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Licensor No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the contract code, for example the licensor and year.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 3222988048 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how much of the advance has been used up by approved statements.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Recouped Amount (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 3222988048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recouped Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Recouped Amount (LCY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 4183752326 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the royalty calculated from all posted sales and credits under this contract.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Royalty Earned (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 4183752326 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Earned (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Royalty Earned (LCY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 205082477 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the percentage of the net sales amount that is owed as royalty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Royalty Rate % - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 205082477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Rate %</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Royalty Rate % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 460889064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the first posting date that the contract applies to.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Starting Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2116767035 - Field 460889064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Contract - Field Starting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Ledger Entry</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - NamedType 1943048425" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty ledger entry %1 belongs to approved statement %2 and cannot be changed. Post a correction in a later period instead.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = entry no., %2 = statement no.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - NamedType FrozenErr</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 3609111399 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the contract the royalty was calculated under.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Contract No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 3609111399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contract No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Contract No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 2570673311 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies when the calculation created this entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Created At - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 2570673311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Created At</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Created At - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 4190130733 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the customer on the source document.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Customer No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 4190130733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Customer No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 2480638018 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line number on the posted document.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Document Line No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 2480638018 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Document Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the posted document number.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Document No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the source is a posted sales invoice or a posted sales credit memo.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Document Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 2363328873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Document Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 883711285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 568743302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the item that was sold or credited.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Item No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 3710982960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the posting date of the source document.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Posting Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Posting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 2704404533 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the quantity invoiced. Credits are negative.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 2704404533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 2925111049 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the royalty owed for this line. Credits are negative.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Royalty Amount (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 2925111049 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Royalty Amount (LCY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 205082477 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the rate in force when the entry was calculated.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Royalty Rate % - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 205082477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Rate %</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Royalty Rate % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 1447790309 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the net sales amount the royalty rate was applied to, in local currency.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Sales Amount (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 1447790309 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Sales Amount (LCY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 2170220406 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the statement this entry has been included in. Blank until a statement collects it.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Statement No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 2170220406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Statement No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 625374996 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the posted value entry this royalty was calculated from. Each value entry is processed once.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Value Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1956821238 - Field 625374996 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Value Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Ledger Entry - Field Value Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 2614033250 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the general journal batch that accrual lines are created in. Lines are previewed and posted from the journal, never automatically.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Accrual Jnl. Batch Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 2614033250 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accrual Jnl. Batch Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Accrual Jnl. Batch Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 638652582 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the general journal template that accrual lines are created in.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Accrual Jnl. Template Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 638652582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accrual Jnl. Template Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Accrual Jnl. Template Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 2542837376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the liability account credited with the amount payable to the licensor.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Accrued Royalties Account - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 2542837376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accrued Royalties Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Accrued Royalties Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 3822046881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the prepayment account credited when royalties are recouped against an advance.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Advance Paid Account - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 3822046881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Advance Paid Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Advance Paid Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 1756506188 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the last value entry the royalty calculation has looked at. The next run starts after this entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Last Processed Value Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 1756506188 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Processed Value Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Last Processed Value Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 2301720399 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the G/L account debited with the royalty earned in the period.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Royalty Expense Account - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 2301720399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Expense Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Royalty Expense Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 162404827 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number series used for royalty statements.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Statement Nos. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4022323584 - Field 162404827 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement Nos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Setup - Field Statement Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Statement</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - NamedType 1943048425" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement %1 is approved and cannot be changed.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = statement no.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - NamedType FrozenErr</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 1378760138 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies when the statement was approved and frozen.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Approved At - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 1378760138 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approved At</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Approved At - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 4041162204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the user who approved the statement.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Approved By - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 4041162204 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approved By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Approved By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 3609111399 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the contract the statement is for.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Contract No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 3609111399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contract No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Contract No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 2196214958 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the royalty earned on the entries in the period.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Earned Amount (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 2196214958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Earned Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Earned Amount (LCY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 794363632 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the vendor the statement is addressed to.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Licensor No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 794363632 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Licensor No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Licensor No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the statement number, taken from the number series in Royalty Setup.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 4196669088 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many royalty ledger entries the statement includes.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field No. of Entries - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 4196669088 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field No. of Entries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 1351594800 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number series the statement number was taken from.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field No. Series - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field No. Series - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 3611917835 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the incremental royalty to pay: earned minus recouped.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Payable Amount (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 3611917835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payable Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Payable Amount (LCY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 459019446 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the last posting date included in the statement. Accrual lines use this as posting date.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Period End - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 459019446 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Period End</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Period End - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 864109087 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the first posting date included in the statement.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Period Start - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 864109087 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Period Start</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Period Start - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 3222988048 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the part of the earned royalty offset against the unrecouped advance.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Recouped Amount (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 3222988048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recouped Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Recouped Amount (LCY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 2188429124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the user who marked the statement as reviewed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Reviewed By - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 2188429124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reviewed By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Reviewed By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies where the statement is in the Draft, Reviewed, Approved flow. Approved statements are frozen.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Status - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 229158058 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Royalty Statement - Field Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement Audit Entry</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Field 608489273 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies when the change was made.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Field Changed At - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Field 608489273 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Changed At</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Field Changed At - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Field 883711285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Field Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Field 2955941580 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the status after the change.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Field New Status - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Field 2955941580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New Status</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Field New Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Field 1138927965 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the status before the change.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Field Old Status - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Field 1138927965 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Old Status</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Field Old Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Field 2170220406 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the statement that changed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Field Statement No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Field 2170220406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Field Statement No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Field 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies who made the change.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Field User ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4196066669 - Field 2708250016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RYL Statement Audit Entry - Field User ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1892361647 - NamedType 2908396983" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal lines for statement %1 already exist in batch %2. Post or delete them first.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = statement no., %2 = batch name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit RYL Accrual Journal - NamedType AlreadyInJournalErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1892361647 - NamedType 1746037662" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L entries with document no. %1 already exist. The accrual for this statement has been posted.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = statement no.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit RYL Accrual Journal - NamedType AlreadyPostedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1892361647 - NamedType 1848060101" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty earned, contract %1, statement %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = contract no., %2 = statement no.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit RYL Accrual Journal - NamedType EarnedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1892361647 - NamedType 316050564" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty payable, contract %1, statement %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = contract no., %2 = statement no.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit RYL Accrual Journal - NamedType PayableLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1892361647 - NamedType 1634353783" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Advance recouped, contract %1, statement %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = contract no., %2 = statement no.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit RYL Accrual Journal - NamedType RecoupedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2420415955 - NamedType 263252847" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User %1 is not a Royalty Approver. Set the flag in User Setup.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = user id</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit RYL Statement Management - NamedType NotApproverErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2420415955 - NamedType 259732076" size-unit="char" translate="yes" xml:space="preserve">
+          <source>must not be before Period Start</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit RYL Statement Management - NamedType PeriodErr</note>
+        </trans-unit>
+        <trans-unit id="Page 3118329359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Contract Card</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Contract Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3118329359 - Control 3513646847 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balances</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Contract Card - Control Balances - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3118329359 - Control 1714694994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the part of the advance not yet offset by approved statements.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Contract Card - Control UnrecoupedAdvance - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3118329359 - Control 1714694994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unrecouped Advance (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Contract Card - Control UnrecoupedAdvance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3118329359 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Contract Card - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3118329359 - Control 773332919 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Terms</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Contract Card - Control Terms - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3118329359 - Action 1008043521 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show the royalty calculated for each posted sales and credit line under this contract.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Contract Card - Action LedgerEntries - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3118329359 - Action 1008043521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Ledger Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Contract Card - Action LedgerEntries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3118329359 - Action 297085026 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show the statements issued for this contract.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Contract Card - Action Statements - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3118329359 - Action 297085026 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statements</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Contract Card - Action Statements - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3073923942 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Contracts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Contracts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 393822728 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Ledger Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Ledger Entries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4022323584 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4022323584 - NamedType 976028651" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 royalty ledger entries created.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = count</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Setup - NamedType CreatedMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 4022323584 - Control 2268672301 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accrual Journal</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Setup - Control Accrual - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4022323584 - Control 1532816877 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Numbering</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Setup - Control Numbering - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4022323584 - Control 3862845261 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Processing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Setup - Control Processing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4022323584 - Action 111885946 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create royalty ledger entries for sales posted since the last run. Safe to run again at any time.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Setup - Action CalculateRoyalties - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4022323584 - Action 111885946 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculate Royalties</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Setup - Action CalculateRoyalties - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Statement</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - NamedType 270837651" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approve statement %1? It will be frozen and its entries can no longer be changed.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = statement no.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - NamedType ApproveQst</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - NamedType 1412365834" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 entries collected.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = count</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - NamedType CollectedMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - NamedType 997742640" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 journal lines created. Preview and post them from the journal.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = count</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - NamedType LinesMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Control 1692197337 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amounts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Control Amounts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Control 227370865 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approval</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Control Approval - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 1494732337 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show who changed the status of this statement and when.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action AuditEntries - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 1494732337 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Audit Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action AuditEntries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 2571907030 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show the entries included in this statement.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action Entries - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 2571907030 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Ledger Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action Entries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 803889193 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approve and freeze the statement. Requires the Royalty Approver flag in User Setup.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action Approve - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 803889193 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approve</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action Approve - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 1894272224 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attach the royalty ledger entries of the contract in the period that are not yet on a statement, and recalculate the totals.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action CollectEntries - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 1894272224 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Collect Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action CollectEntries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 146806185 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create the expense, recoupment and payable lines in the accrual journal batch. Preview and post them from the journal.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action CreateAccrual - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 146806185 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Accrual Journal Lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action CreateAccrual - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 2071937805 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Send the statement back to Draft so entries can be collected again.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action Reopen - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 2071937805 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reopen</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action Reopen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 156978454 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confirm the figures have been checked. The statement can still be reopened.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action Review - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 156978454 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mark as Reviewed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action Review - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 982351116 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action Category_Navigate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 20659182 - Action 3383493608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statement Card - Action Category_Process - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1715328151 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Statements</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Royalty Statements - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1004234431 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement Audit Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RYL Statement Audit Entries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1101196086 - Field 1848808466 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Specifies the royalty contract that sales of this item are calculated under. Blank means no royalty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension RYL Item - Field RYL Royalty Contract No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1101196086 - Field 1848808466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Royalty Contract No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension RYL Item - Field RYL Royalty Contract No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4119070491 - Field 3067249138 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 337631938">
+          <source>Specifies that the user may approve royalty statements.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension RYL User Setup - Field RYL Royalty Approver - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4119070491 - Field 3067249138 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 337631938">
+          <source>Royalty Approver</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension RYL User Setup - Field RYL Royalty Approver - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3344464570 - EnumValue 2913119229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approved</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum RYL Statement Status - EnumValue Approved - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3344464570 - EnumValue 253238575 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Draft</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum RYL Statement Status - EnumValue Draft - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3344464570 - EnumValue 3732000533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reviewed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum RYL Statement Status - EnumValue Reviewed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 3404006813 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Accrual Sample</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet RYL ROYALTY - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
