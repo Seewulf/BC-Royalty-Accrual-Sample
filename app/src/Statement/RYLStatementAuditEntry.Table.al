@@ -47,4 +47,23 @@ table 50104 "RYL Statement Audit Entry"
         key(PK; "Entry No.") { Clustered = true; }
         key(Statement; "Statement No.") { }
     }
+
+    // audit rows are only ever added
+    trigger OnModify()
+    begin
+        Error(ReadOnlyErr);
+    end;
+
+    trigger OnDelete()
+    begin
+        Error(ReadOnlyErr);
+    end;
+
+    trigger OnRename()
+    begin
+        Error(ReadOnlyErr);
+    end;
+
+    var
+        ReadOnlyErr: Label 'Statement audit entries cannot be changed or deleted.';
 }

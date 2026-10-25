@@ -79,4 +79,111 @@ codeunit 50152 "RYL Minimum Guarantee Tests"
         Assert.AreEqual(500, RoyaltyStatement."Recouped Amount (LCY)", 'draft recoupment');
         Assert.AreEqual(1000, RoyaltyContract.UnrecoupedAdvance(), 'advance untouched while draft');
     end;
+
+    [Test]
+    procedure SecondApprovalRefusedWhenAdvanceAlreadyUsed()
+    var
+        Statement1: Record "RYL Royalty Statement";
+        Statement2: Record "RYL Royalty Statement";
+    begin
+        // [SCENARIO] Advance 1,000 at 10%. Two periods earn 600 each and are both reviewed before either is approved.
+        // [GIVEN] Both reviewed, each showing 600 recouped
+        PrepareTwoReviewedStatements(Statement1, Statement2);
+        Assert.AreEqual(600, Statement2."Recouped Amount (LCY)", 'statement 2 before');
+
+        // [WHEN] Statement 1 is approved
+        StatementManagement.Approve(Statement1);
+
+        // [THEN] Statement 2 cannot be approved with the old figures
+        asserterror StatementManagement.Approve(Statement2);
+        Assert.ExpectedError('has changed since it was reviewed');
+    end;
+
+    [Test]
+    procedure ReviewAgainRecoupsOnlyWhatIsLeft()
+    var
+        RoyaltyContract: Record "RYL Royalty Contract";
+        Statement1: Record "RYL Royalty Statement";
+        Statement2: Record "RYL Royalty Statement";
+    begin
+        // [SCENARIO] After statement 1 is approved, statement 2 is reopened and reviewed again and recoups only the 400 left.
+        PrepareTwoReviewedStatements(Statement1, Statement2);
+        StatementManagement.Approve(Statement1);
+
+        StatementManagement.Reopen(Statement2);
+        StatementManagement.Review(Statement2);
+        StatementManagement.Approve(Statement2);
+
+        Assert.AreEqual(400, Statement2."Recouped Amount (LCY)", 'statement 2 recouped');
+        Assert.AreEqual(200, Statement2."Payable Amount (LCY)", 'statement 2 payable');
+        RoyaltyContract.Get(Statement2."Contract No.");
+        Assert.AreEqual(0, RoyaltyContract.UnrecoupedAdvance(), 'advance fully used');
+    end;
+
+    [Test]
+    procedure CreditPeriodGivesAdvanceBack()
+    var
+        RoyaltyContract: Record "RYL Royalty Contract";
+        Item: Record Item;
+        Statement1: Record "RYL Royalty Statement";
+        Statement2: Record "RYL Royalty Statement";
+        Statement3: Record "RYL Royalty Statement";
+        NextMonth: Date;
+    begin
+        // [SCENARIO] Advance 20,000 at 8%. Period 1 earns 12,000. Period 2 is a net credit of -2,000.
+        // Period 3 earns 12,000. The credit gives 2,000 of the advance back, so period 3 recoups 10,000 and pays 2,000.
+        TestLibrary.InitSetup();
+        TestLibrary.SetCurrentUserAsApprover(true);
+        TestLibrary.CreateContract(RoyaltyContract, 8, 20000);
+        TestLibrary.CreateRoyaltyItem(Item, RoyaltyContract."No.");
+        NextMonth := CalcDate('<CM+1D>', WorkDate());
+
+        // [GIVEN] Period 1: sales of 150,000, approved
+        TestLibrary.PostSale(Item."No.", 1000, 150, WorkDate());
+        TestLibrary.RunCalculation();
+        TestLibrary.CreateStatement(Statement1, RoyaltyContract."No.", CalcDate('<-CM>', WorkDate()), CalcDate('<CM>', WorkDate()));
+        StatementManagement.Review(Statement1);
+        StatementManagement.Approve(Statement1);
+
+        // [WHEN] Period 2: a credit of 25,000 (royalty -2,000)
+        TestLibrary.PostCredit(Item."No.", 1, 25000, NextMonth);
+        TestLibrary.RunCalculation();
+        TestLibrary.CreateStatement(Statement2, RoyaltyContract."No.", NextMonth, CalcDate('<9D>', NextMonth));
+
+        // [THEN] Nothing payable, 2,000 of the advance comes back
+        Assert.AreEqual(-2000, Statement2."Earned Amount (LCY)", 'period 2 earned');
+        Assert.AreEqual(-2000, Statement2."Recouped Amount (LCY)", 'period 2 recouped');
+        Assert.AreEqual(0, Statement2."Payable Amount (LCY)", 'period 2 payable');
+        StatementManagement.Review(Statement2);
+        StatementManagement.Approve(Statement2);
+        Assert.AreEqual(10000, RoyaltyContract.UnrecoupedAdvance(), 'advance left after credit');
+
+        // [THEN] Period 3: sales of 150,000 recoup the 10,000 left and pay 2,000
+        TestLibrary.PostSale(Item."No.", 1000, 150, CalcDate('<15D>', NextMonth));
+        TestLibrary.RunCalculation();
+        TestLibrary.CreateStatement(Statement3, RoyaltyContract."No.", CalcDate('<10D>', NextMonth), CalcDate('<CM>', NextMonth));
+        Assert.AreEqual(12000, Statement3."Earned Amount (LCY)", 'period 3 earned');
+        Assert.AreEqual(10000, Statement3."Recouped Amount (LCY)", 'period 3 recouped');
+        Assert.AreEqual(2000, Statement3."Payable Amount (LCY)", 'period 3 payable');
+    end;
+
+    local procedure PrepareTwoReviewedStatements(var Statement1: Record "RYL Royalty Statement"; var Statement2: Record "RYL Royalty Statement")
+    var
+        RoyaltyContract: Record "RYL Royalty Contract";
+        Item: Record Item;
+        Period2Start: Date;
+    begin
+        TestLibrary.InitSetup();
+        TestLibrary.SetCurrentUserAsApprover(true);
+        TestLibrary.CreateContract(RoyaltyContract, 10, 1000);
+        TestLibrary.CreateRoyaltyItem(Item, RoyaltyContract."No.");
+        Period2Start := CalcDate('<CM+1D>', WorkDate());
+        TestLibrary.PostSale(Item."No.", 1, 6000, WorkDate());
+        TestLibrary.PostSale(Item."No.", 1, 6000, Period2Start);
+        TestLibrary.RunCalculation();
+        TestLibrary.CreateStatement(Statement1, RoyaltyContract."No.", CalcDate('<-CM>', WorkDate()), CalcDate('<CM>', WorkDate()));
+        TestLibrary.CreateStatement(Statement2, RoyaltyContract."No.", Period2Start, CalcDate('<CM>', Period2Start));
+        StatementManagement.Review(Statement1);
+        StatementManagement.Review(Statement2);
+    end;
 }
