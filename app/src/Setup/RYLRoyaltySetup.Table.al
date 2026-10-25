@@ -60,8 +60,13 @@ table 50100 "RYL Royalty Setup"
         field(40; "Last Processed Value Entry No."; Integer)
         {
             Caption = 'Last Processed Value Entry No.';
-            Editable = false;
-            ToolTip = 'Specifies the last value entry the royalty calculation has looked at. The next run starts after this entry.';
+            MinValue = 0;
+            ToolTip = 'Specifies the last value entry the royalty calculation has looked at. The next run starts after this entry. You can set it back to pick up older sales again, for example after mapping an item to a contract. Entries that already have a royalty entry are skipped, so nothing is counted twice.';
+        }
+        field(50; "Separate Approver Required"; Boolean)
+        {
+            Caption = 'Separate Approver Required';
+            ToolTip = 'Specifies that the user who approves a statement must be different from the user who reviewed it.';
         }
     }
 
@@ -70,8 +75,9 @@ table 50100 "RYL Royalty Setup"
         key(PK; "Primary Key") { Clustered = true; }
     }
 
-    procedure GetRecordOnce()
+    procedure InsertIfMissing()
     begin
+        Reset();
         if not Get() then begin
             Init();
             Insert();

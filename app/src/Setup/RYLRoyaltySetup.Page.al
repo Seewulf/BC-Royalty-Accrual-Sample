@@ -32,6 +32,7 @@ page 50100 "RYL Royalty Setup"
             {
                 Caption = 'Processing';
                 field("Last Processed Value Entry No."; Rec."Last Processed Value Entry No.") { }
+                field("Separate Approver Required"; Rec."Separate Approver Required") { }
             }
         }
     }
@@ -62,7 +63,7 @@ page 50100 "RYL Royalty Setup"
 
     trigger OnOpenPage()
     begin
-        Rec.GetRecordOnce();
+        Rec.InsertIfMissing();
     end;
 
     var

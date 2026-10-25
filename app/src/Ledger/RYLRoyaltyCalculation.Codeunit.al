@@ -3,11 +3,14 @@ namespace PrabinBhusal.RoyaltySample;
 using Microsoft.Finance.GeneralLedger.Setup;
 using Microsoft.Inventory.Item;
 using Microsoft.Inventory.Ledger;
+using System.Threading;
 
 // Royalty calculation from value entries. Run from job queue or the setup page.
 codeunit 50100 "RYL Royalty Calculation"
 {
-    TableNo = "RYL Royalty Setup";
+    // the job queue passes its own entry in, so TableNo has to be Job Queue Entry
+    TableNo = "Job Queue Entry";
+    Permissions = tabledata "RYL Royalty Ledger Entry" = ri;
 
     trigger OnRun()
     begin
@@ -21,9 +24,10 @@ codeunit 50100 "RYL Royalty Calculation"
         LastEntryNo: Integer;
     begin
         RoyaltySetup.LockTable();
-        RoyaltySetup.GetRecordOnce();
+        RoyaltySetup.InsertIfMissing();
         LastEntryNo := RoyaltySetup."Last Processed Value Entry No.";
 
+        ValueEntry.ReadIsolation := IsolationLevel::ReadCommitted;
         ValueEntry.SetCurrentKey("Entry No.");
         ValueEntry.SetFilter("Entry No.", '>%1', LastEntryNo);
         ValueEntry.SetRange("Item Ledger Entry Type", ValueEntry."Item Ledger Entry Type"::Sale);
@@ -59,7 +63,7 @@ codeunit 50100 "RYL Royalty Calculation"
         if not ContractCovers(RoyaltyContract, ValueEntry."Posting Date") then
             exit(false);
 
-        // already done (unique key on value entry no.)
+        // already done, for example after the pointer was set back (unique key on value entry no.)
         RoyaltyLedgerEntry.SetRange("Value Entry No.", ValueEntry."Entry No.");
         if not RoyaltyLedgerEntry.IsEmpty() then
             exit(false);

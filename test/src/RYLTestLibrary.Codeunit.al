@@ -22,12 +22,13 @@ codeunit 50150 "RYL Test Library"
         RoyaltySetup: Record "RYL Royalty Setup";
         ValueEntry: Record "Value Entry";
     begin
-        RoyaltySetup.GetRecordOnce();
+        RoyaltySetup.InsertIfMissing();
         RoyaltySetup."Statement Nos." := CreateNoSeries();
         CreateJournalBatch(RoyaltySetup."Accrual Jnl. Template Name", RoyaltySetup."Accrual Jnl. Batch Name");
         RoyaltySetup."Royalty Expense Account" := CreateGLAccount();
         RoyaltySetup."Accrued Royalties Account" := CreateGLAccount();
         RoyaltySetup."Advance Paid Account" := CreateGLAccount();
+        RoyaltySetup."Separate Approver Required" := false;
         // skip whatever is already there
         if ValueEntry.FindLast() then
             RoyaltySetup."Last Processed Value Entry No." := ValueEntry."Entry No.";
@@ -67,6 +68,9 @@ codeunit 50150 "RYL Test Library"
         Item."No." := NewCode('I');
         Item.Description := 'Test licensed item';
         Item."RYL Royalty Contract No." := ContractNo;
+        Item."Item Tracking Code" := '';
+        Item."Sales Unit of Measure" := Item."Base Unit of Measure";
+        Item."Purch. Unit of Measure" := Item."Base Unit of Measure";
         Item.Insert(true);
         ItemUnitOfMeasure.Init();
         ItemUnitOfMeasure."Item No." := Item."No.";
@@ -107,6 +111,7 @@ codeunit 50150 "RYL Test Library"
         SalesLine.Validate("No.", ItemNo);
         SalesLine.Validate(Quantity, Quantity);
         SalesLine.Validate("Unit Price", UnitPrice);
+        SalesLine.Validate("Line Discount %", 0);
         SalesLine.Insert(true);
 
         SalesHeader.Ship := true;
@@ -144,6 +149,32 @@ codeunit 50150 "RYL Test Library"
         StatementManagement.CollectEntries(RoyaltyStatement);
     end;
 
+    procedure SetPointerBack(ToEntryNo: Integer)
+    var
+        RoyaltySetup: Record "RYL Royalty Setup";
+    begin
+        RoyaltySetup.Get();
+        RoyaltySetup."Last Processed Value Entry No." := ToEntryNo;
+        RoyaltySetup.Modify();
+    end;
+
+    procedure SetSeparateApprover(Required: Boolean)
+    var
+        RoyaltySetup: Record "RYL Royalty Setup";
+    begin
+        RoyaltySetup.Get();
+        RoyaltySetup."Separate Approver Required" := Required;
+        RoyaltySetup.Modify();
+    end;
+
+    procedure LastValueEntryNo(): Integer
+    var
+        ValueEntry: Record "Value Entry";
+    begin
+        if ValueEntry.FindLast() then
+            exit(ValueEntry."Entry No.");
+    end;
+
     procedure SetCurrentUserAsApprover(IsApprover: Boolean)
     var
         UserSetup: Record "User Setup";
@@ -170,6 +201,12 @@ codeunit 50150 "RYL Test Library"
         Customer := SourceCustomer;
         Customer."No." := NewCode('CU');
         Customer.Name := 'Test customer';
+        // plain net prices so the expected amounts are simple
+        Customer."Prices Including VAT" := false;
+        Customer."Customer Disc. Group" := '';
+        Customer."Customer Price Group" := '';
+        Customer."Invoice Disc. Code" := '';
+        Customer."Location Code" := '';
         Customer.Insert(true);
         exit(Customer."No.");
     end;
@@ -218,6 +255,7 @@ codeunit 50150 "RYL Test Library"
         GenJournalBatch.Init();
         GenJournalBatch."Journal Template Name" := GenJournalTemplate.Name;
         GenJournalBatch.Name := 'ROYALTY';
+        GenJournalBatch."Copy VAT Setup to Jnl. Lines" := false;
         GenJournalBatch.Insert(true);
         TemplateName := GenJournalTemplate.Name;
         BatchName := GenJournalBatch.Name;

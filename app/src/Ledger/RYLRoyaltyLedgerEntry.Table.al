@@ -72,17 +72,19 @@ table 50102 "RYL Royalty Ledger Entry"
         field(21; "Sales Amount (LCY)"; Decimal)
         {
             Caption = 'Sales Amount (LCY)';
+            AutoFormatType = 1;
             ToolTip = 'Specifies the net sales amount the royalty rate was applied to, in local currency.';
         }
         field(22; "Royalty Rate %"; Decimal)
         {
             Caption = 'Royalty Rate %';
             DecimalPlaces = 0 : 2;
-            ToolTip = 'Specifies the rate in force when the entry was calculated.';
+            ToolTip = 'Specifies the contract rate used when the entry was calculated.';
         }
         field(23; "Royalty Amount (LCY)"; Decimal)
         {
             Caption = 'Royalty Amount (LCY)';
+            AutoFormatType = 1;
             ToolTip = 'Specifies the royalty owed for this line. Credits are negative.';
         }
         field(30; "Statement No."; Code[20])
@@ -117,8 +119,17 @@ table 50102 "RYL Royalty Ledger Entry"
     end;
 
     trigger OnDelete()
+    var
+        StoredEntry: Record "RYL Royalty Ledger Entry";
     begin
+        if StoredEntry.Get("Entry No.") then
+            TestNotFrozen(StoredEntry."Statement No.");
         TestNotFrozen("Statement No.");
+    end;
+
+    trigger OnRename()
+    begin
+        Error(RenameErr);
     end;
 
     local procedure TestNotFrozen(StatementNo: Code[20])
@@ -134,5 +145,6 @@ table 50102 "RYL Royalty Ledger Entry"
     end;
 
     var
+        RenameErr: Label 'Royalty ledger entries cannot be renamed.';
         FrozenErr: Label 'Royalty ledger entry %1 belongs to approved statement %2 and cannot be changed. Post a correction in a later period instead.', Comment = '%1 = entry no., %2 = statement no.';
 }
