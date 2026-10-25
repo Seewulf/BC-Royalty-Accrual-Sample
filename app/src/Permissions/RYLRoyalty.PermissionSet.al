@@ -8,9 +8,9 @@ permissionset 50100 "RYL ROYALTY"
     Permissions =
         tabledata "RYL Royalty Setup" = RIMD,
         tabledata "RYL Royalty Contract" = RIMD,
-        tabledata "RYL Royalty Ledger Entry" = RIMD,
+        tabledata "RYL Royalty Ledger Entry" = Rim,
         tabledata "RYL Royalty Statement" = RIMD,
-        tabledata "RYL Statement Audit Entry" = RIMD,
+        tabledata "RYL Statement Audit Entry" = Ri,
         table "RYL Royalty Setup" = X,
         table "RYL Royalty Contract" = X,
         table "RYL Royalty Ledger Entry" = X,
@@ -24,6 +24,7 @@ permissionset 50100 "RYL ROYALTY"
         page "RYL Royalty Contract Card" = X,
         page "RYL Royalty Ledger Entries" = X,
         page "RYL Royalty Statements" = X,
-        page "RYL Royalty Statement Card" = X,
+        page "RYL Royalty Statement" = X,
+        page "RYL Royalty Statement Lines" = X,
         page "RYL Statement Audit Entries" = X;
 }

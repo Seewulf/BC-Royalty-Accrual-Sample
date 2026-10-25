@@ -1,11 +1,12 @@
 namespace PrabinBhusal.RoyaltySample;
 
-page 50105 "RYL Royalty Statement Card"
+page 50105 "RYL Royalty Statement"
 {
     Caption = 'Royalty Statement';
     PageType = Document;
     SourceTable = "RYL Royalty Statement";
     ApplicationArea = All;
+    UsageCategory = None;
 
     layout
     {
@@ -14,13 +15,19 @@ page 50105 "RYL Royalty Statement Card"
             group(General)
             {
                 Caption = 'General';
-                field("No."; Rec."No.") { }
-                field("Contract No."; Rec."Contract No.") { }
+                field("No."; Rec."No.") { Editable = false; }
+                field("Contract No."; Rec."Contract No.") { Editable = IsDraft; }
                 field("Licensor No."; Rec."Licensor No.") { }
-                field("Period Start"; Rec."Period Start") { }
-                field("Period End"; Rec."Period End") { }
+                field("Licensor Name"; Rec."Licensor Name") { }
+                field("Period Start"; Rec."Period Start") { Editable = IsDraft; }
+                field("Period End"; Rec."Period End") { Editable = IsDraft; }
                 field(Status; Rec.Status) { }
                 field("No. of Entries"; Rec."No. of Entries") { }
+            }
+            part(Lines; "RYL Royalty Statement Lines")
+            {
+                Caption = 'Entries';
+                SubPageLink = "Statement No." = field("No.");
             }
             group(Amounts)
             {
@@ -110,6 +117,14 @@ page 50105 "RYL Royalty Statement Card"
         }
         area(Navigation)
         {
+            action(Contract)
+            {
+                Caption = 'Contract';
+                Image = Agreement;
+                RunObject = page "RYL Royalty Contract Card";
+                RunPageLink = "No." = field("Contract No.");
+                ToolTip = 'Open the contract this statement is for.';
+            }
             action(Entries)
             {
                 Caption = 'Royalty Ledger Entries';
@@ -141,14 +156,21 @@ page 50105 "RYL Royalty Statement Card"
             group(Category_Navigate)
             {
                 Caption = 'Statement';
+                actionref(Contract_Promoted; Contract) { }
                 actionref(Entries_Promoted; Entries) { }
                 actionref(AuditEntries_Promoted; AuditEntries) { }
             }
         }
     }
 
+    trigger OnAfterGetCurrRecord()
+    begin
+        IsDraft := Rec.Status = Rec.Status::Draft;
+    end;
+
     var
         StatementManagement: Codeunit "RYL Statement Management";
+        IsDraft: Boolean;
         CollectedMsg: Label '%1 entries collected.', Comment = '%1 = count';
         LinesMsg: Label '%1 journal lines created. Preview and post them from the journal.', Comment = '%1 = count';
         ApproveQst: Label 'Approve statement %1? It will be frozen and its entries can no longer be changed.', Comment = '%1 = statement no.';

@@ -6,6 +6,7 @@ page 50102 "RYL Royalty Contract Card"
     PageType = Card;
     SourceTable = "RYL Royalty Contract";
     ApplicationArea = All;
+    UsageCategory = None;
 
     layout
     {
@@ -17,6 +18,7 @@ page 50102 "RYL Royalty Contract Card"
                 field("No."; Rec."No.") { }
                 field(Description; Rec.Description) { }
                 field("Licensor No."; Rec."Licensor No.") { }
+                field("Licensor Name"; Rec."Licensor Name") { }
                 field(Blocked; Rec.Blocked) { }
             }
             group(Terms)
@@ -35,6 +37,7 @@ page 50102 "RYL Royalty Contract Card"
                 field(UnrecoupedAdvance; Rec.UnrecoupedAdvance())
                 {
                     Caption = 'Unrecouped Advance (LCY)';
+                    AutoFormatType = 1;
                     ToolTip = 'Specifies the part of the advance not yet offset by approved statements.';
                 }
             }

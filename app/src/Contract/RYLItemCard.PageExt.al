@@ -6,7 +6,7 @@ pageextension 50100 "RYL Item Card" extends "Item Card"
 {
     layout
     {
-        addlast(Item)
+        addlast("Prices & Sales")
         {
             field("RYL Royalty Contract No."; Rec."RYL Royalty Contract No.")
             {
