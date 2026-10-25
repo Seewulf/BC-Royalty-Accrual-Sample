@@ -4,7 +4,7 @@
   "publisher": "Prabin Bhusal",
   "version": "1.0.0.0",
   "brief": "Automated tests for Royalty Accrual Sample.",
-  "description": "Test codeunits: idempotent calculation, credit memo handling, minimum-guarantee recoupment, statement approval and freezing, accrual journal lines. Depends only on Library Assert, so it runs on any online sandbox.",
+  "description": "Tests for the royalty sample: calculation, credit memos, advance recoupment, approval and accrual lines. Only needs Library Assert, so it runs on a normal online sandbox.",
   "dependencies": [
     {
       "id": "df11d72a-db7d-4504-bb5b-a70208a06ce2",
