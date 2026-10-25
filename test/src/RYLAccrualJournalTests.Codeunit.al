@@ -1,6 +1,8 @@
 namespace PrabinBhusal.RoyaltySample.Test;
 
+using Microsoft.Finance.GeneralLedger.Account;
 using Microsoft.Finance.GeneralLedger.Journal;
+using Microsoft.Finance.GeneralLedger.Ledger;
 using Microsoft.Inventory.Item;
 using PrabinBhusal.RoyaltySample;
 using System.TestLibraries.Utilities;
@@ -22,6 +24,7 @@ codeunit 50154 "RYL Accrual Journal Tests"
         RoyaltyStatement: Record "RYL Royalty Statement";
         RoyaltySetup: Record "RYL Royalty Setup";
         GenJournalLine: Record "Gen. Journal Line";
+        GLEntry: Record "G/L Entry";
     begin
         // [SCENARIO] Earned 500 with 200 recouped gives three balanced lines: expense 500, advance -200, payable -300. Nothing is posted.
         PrepareApprovedStatement(RoyaltyStatement, 10, 200, 5000);
@@ -44,6 +47,29 @@ codeunit 50154 "RYL Accrual Journal Tests"
         GenJournalLine.SetRange("Account No.", RoyaltySetup."Accrued Royalties Account");
         GenJournalLine.FindFirst();
         Assert.AreEqual(-300, GenJournalLine.Amount, 'payable');
+        GLEntry.SetRange("Document No.", RoyaltyStatement."No.");
+        Assert.RecordIsEmpty(GLEntry);
+    end;
+
+    [Test]
+    procedure BatchWithBalancingAccountIsRefused()
+    var
+        RoyaltyStatement: Record "RYL Royalty Statement";
+        RoyaltySetup: Record "RYL Royalty Setup";
+        GenJournalBatch: Record "Gen. Journal Batch";
+        GLAccount: Record "G/L Account";
+    begin
+        // [SCENARIO] The accrual batch must not have a balancing account, otherwise every line would post against it.
+        PrepareApprovedStatement(RoyaltyStatement, 10, 0, 1000);
+        RoyaltySetup.Get();
+        GenJournalBatch.Get(RoyaltySetup."Accrual Jnl. Template Name", RoyaltySetup."Accrual Jnl. Batch Name");
+        GLAccount.Get(RoyaltySetup."Royalty Expense Account");
+        GenJournalBatch."Bal. Account Type" := GenJournalBatch."Bal. Account Type"::"G/L Account";
+        GenJournalBatch."Bal. Account No." := GLAccount."No.";
+        GenJournalBatch.Modify();
+
+        asserterror AccrualJournal.CreateLines(RoyaltyStatement);
+        Assert.ExpectedError('Bal. Account No.');
     end;
 
     [Test]

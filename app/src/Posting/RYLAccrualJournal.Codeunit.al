@@ -22,6 +22,11 @@ codeunit 50102 "RYL Accrual Journal"
         RoyaltySetup.TestField("Accrued Royalties Account");
         RoyaltySetup.TestField("Advance Paid Account");
         GenJournalBatch.Get(RoyaltySetup."Accrual Jnl. Template Name", RoyaltySetup."Accrual Jnl. Batch Name");
+        // plain batch only: a balancing account or number series would change the entries or the document no.
+        GenJournalBatch.TestField("Bal. Account No.", '');
+        GenJournalBatch.TestField("No. Series", '');
+        GenJournalBatch.TestField("Posting No. Series", '');
+        GenJournalBatch.TestField("Copy VAT Setup to Jnl. Lines", false);
 
         GLEntry.SetRange("Document No.", RoyaltyStatement."No.");
         if not GLEntry.IsEmpty() then
@@ -66,14 +71,12 @@ codeunit 50102 "RYL Accrual Journal"
     procedure OpenJournal()
     var
         RoyaltySetup: Record "RYL Royalty Setup";
-        GenJournalLine: Record "Gen. Journal Line";
+        GenJournalBatch: Record "Gen. Journal Batch";
+        GenJnlManagement: Codeunit GenJnlManagement;
     begin
         RoyaltySetup.Get();
-        GenJournalLine.FilterGroup(2);
-        GenJournalLine.SetRange("Journal Template Name", RoyaltySetup."Accrual Jnl. Template Name");
-        GenJournalLine.SetRange("Journal Batch Name", RoyaltySetup."Accrual Jnl. Batch Name");
-        GenJournalLine.FilterGroup(0);
-        Page.Run(Page::"General Journal", GenJournalLine);
+        GenJournalBatch.Get(RoyaltySetup."Accrual Jnl. Template Name", RoyaltySetup."Accrual Jnl. Batch Name");
+        GenJnlManagement.TemplateSelectionFromBatch(GenJournalBatch);
     end;
 
     var
