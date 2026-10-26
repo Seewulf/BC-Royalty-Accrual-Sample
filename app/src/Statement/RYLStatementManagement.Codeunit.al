@@ -24,12 +24,10 @@ codeunit 50101 "RYL Statement Management"
         RoyaltyLedgerEntry.SetRange("Contract No.", RoyaltyStatement."Contract No.");
         RoyaltyLedgerEntry.SetFilter("Posting Date", '..%1', RoyaltyStatement."Period End");
         RoyaltyLedgerEntry.SetRange("Statement No.", '');
-        if RoyaltyLedgerEntry.FindSet(true) then
-            repeat
-                RoyaltyLedgerEntry."Statement No." := RoyaltyStatement."No.";
-                RoyaltyLedgerEntry.Modify(true);
-                EntriesAdded += 1;
-            until RoyaltyLedgerEntry.Next() = 0;
+        // ModifyAll, not a loop: Statement No. is in the filter and the key, so a loop skipped entries on the same date
+        RoyaltyLedgerEntry.LockTable();
+        EntriesAdded := RoyaltyLedgerEntry.Count();
+        RoyaltyLedgerEntry.ModifyAll("Statement No.", RoyaltyStatement."No.", true);
 
         Recalculate(RoyaltyStatement);
     end;

@@ -167,6 +167,31 @@ codeunit 50152 "RYL Minimum Guarantee Tests"
         Assert.AreEqual(2000, Statement3."Payable Amount (LCY)", 'period 3 payable');
     end;
 
+    [Test]
+    procedure InvoiceAndCreditOnSameDayAreBothCollected()
+    var
+        RoyaltyContract: Record "RYL Royalty Contract";
+        Item: Record Item;
+        RoyaltyStatement: Record "RYL Royalty Statement";
+    begin
+        // [SCENARIO] Advance 500 at 8%. Invoice 10 x 1,000 and credit 2 x 1,000 posted on the same day.
+        // Both entries go on the statement: earned 640, recouped 500, payable 140.
+        TestLibrary.InitSetup();
+        TestLibrary.CreateContract(RoyaltyContract, 8, 500);
+        TestLibrary.CreateRoyaltyItem(Item, RoyaltyContract."No.");
+        TestLibrary.PostSale(Item."No.", 10, 1000, WorkDate());
+        TestLibrary.PostCredit(Item."No.", 2, 1000, WorkDate());
+        TestLibrary.RunCalculation();
+
+        TestLibrary.CreateStatement(RoyaltyStatement, RoyaltyContract."No.", CalcDate('<-CM>', WorkDate()), CalcDate('<CM>', WorkDate()));
+
+        RoyaltyStatement.CalcFields("No. of Entries");
+        Assert.AreEqual(2, RoyaltyStatement."No. of Entries", 'entries collected');
+        Assert.AreEqual(640, RoyaltyStatement."Earned Amount (LCY)", 'earned');
+        Assert.AreEqual(500, RoyaltyStatement."Recouped Amount (LCY)", 'recouped');
+        Assert.AreEqual(140, RoyaltyStatement."Payable Amount (LCY)", 'payable');
+    end;
+
     local procedure PrepareTwoReviewedStatements(var Statement1: Record "RYL Royalty Statement"; var Statement2: Record "RYL Royalty Statement")
     var
         RoyaltyContract: Record "RYL Royalty Contract";

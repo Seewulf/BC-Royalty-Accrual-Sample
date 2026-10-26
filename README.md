@@ -54,7 +54,7 @@ ID range 50100-50149, tests 50150-50169, prefix RYL.
 
 ## Tests
 
-`test/` is a separate app with 31 tests in four codeunits. It only depends on Microsoft's Library Assert, so it runs on a normal online sandbox without the full test toolkit.
+`test/` is a separate app with 32 tests in four codeunits. It only depends on Microsoft's Library Assert, so it runs on a normal online sandbox without the full test toolkit.
 
 - calculation: one entry per invoice, rerun creates nothing, credit memos are negative, unmapped items, blocked contracts and dates outside the contract are skipped, setting the pointer back creates no duplicates and picks up an item mapped later, the Job Queue can run it
 - minimum guarantee: the 20,000 / 8% example, drafts don't use the advance, two statements can't both use it, a credit period gives it back
