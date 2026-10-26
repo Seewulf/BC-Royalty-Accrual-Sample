@@ -5,3 +5,4 @@
 rad.json
 **/.vscode/launch.json
 .altestrunner/
+.coverage/
