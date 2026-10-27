@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="Segoe UI, Arial, sans-serif">
+<title>The calculation: what happens to each value entry</title>
+<defs>
+  <marker id="at" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0e7c86"/></marker>
+  <marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e6961e"/></marker>
+</defs>
+<rect x="0" y="0" width="1600" height="1000" fill="#ffffff"/>
+<text x="50" y="60" font-size="34" font-weight="bold" fill="#13294b">The calculation: what happens to each value entry</text>
+<text x="50" y="92" font-size="18" fill="#5a6472">Codeunit 50100 "RYL Royalty Calculation": ProcessNewSales reads new sales, ProcessValueEntry decides each one</text>
+
+<!-- ===== Column A: setup steps ===== -->
+<g font-size="15" fill="#1e232d">
+  <rect x="50" y="122" width="390" height="62" rx="10" fill="#13294b"/>
+  <circle cx="74" cy="153" r="13" fill="#ffffff"/><text x="74" y="158" font-size="15" font-weight="bold" fill="#13294b" text-anchor="middle">1</text>
+  <text x="98" y="148" font-size="18" font-weight="bold" fill="#ffffff">Start: ProcessNewSales</text>
+  <text x="98" y="171" fill="#ffffff">Job Queue OnRun or Calculate Royalties</text>
+
+  <line x1="245" y1="184" x2="245" y2="206" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#at)"/>
+
+  <rect x="50" y="208" width="390" height="120" rx="10" fill="#e1f0f1" stroke="#0e7c86" stroke-width="2"/>
+  <circle cx="74" cy="233" r="13" fill="#0e7c86"/><text x="74" y="238" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="98" y="239" font-size="18" font-weight="bold" fill="#13294b">Lock setup, read the pointer</text>
+  <g font-family="Consolas, monospace" font-size="14" fill="#1e232d">
+    <text x="70" y="264">RoyaltySetup.LockTable();</text>
+    <text x="70" y="283">RoyaltySetup.InsertIfMissing();</text>
+    <text x="70" y="302">LastEntryNo :=</text>
+    <text x="90" y="320">"Last Processed Value Entry No."</text>
+  </g>
+
+  <line x1="245" y1="328" x2="245" y2="350" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#at)"/>
+
+  <rect x="50" y="352" width="390" height="220" rx="10" fill="#e1f0f1" stroke="#0e7c86" stroke-width="2"/>
+  <circle cx="74" cy="377" r="13" fill="#0e7c86"/><text x="74" y="382" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="98" y="383" font-size="18" font-weight="bold" fill="#13294b">Filter and sort Value Entry</text>
+  <g font-family="Consolas, monospace" font-size="14" fill="#1e232d">
+    <text x="70" y="412">ReadIsolation = ReadCommitted</text>
+    <text x="70" y="436">SetCurrentKey("Entry No.")</text>
+    <text x="70" y="460">Entry No. &gt; LastEntryNo</text>
+    <text x="70" y="484">Item Ledger Entry Type = Sale</text>
+    <text x="70" y="508">Document Type = Sales Invoice</text>
+    <text x="90" y="526">| Sales Credit Memo</text>
+    <text x="70" y="550">Item Charge No. = ''</text>
+  </g>
+  <text x="290" y="436" fill="#5a6472">(lowest first)</text>
+  <text x="270" y="550" fill="#5a6472">(no item charges)</text>
+</g>
+
+<!-- step 3 -> loop box elbow -->
+<polyline points="440,462 455,462 455,153 498,153" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#at)"/>
+
+<!-- Example -->
+<rect x="50" y="592" width="390" height="178" rx="10" fill="#eef3f7" stroke="#13294b" stroke-width="1.5"/>
+<text x="70" y="620" font-size="17" font-weight="bold" fill="#13294b">Example: contract at 8%</text>
+<g font-size="15" fill="#1e232d">
+  <text x="70" y="649">Invoice 500 x 4.00 = 2,000 sales</text>
+  <text x="90" y="670">royalty = 2,000 x 8 / 100 = <tspan font-weight="bold" fill="#2e7d32">160</tspan></text>
+  <text x="70" y="699">Credit memo 50 x 4.00 = -200 sales</text>
+  <text x="90" y="720">royalty = -200 x 8 / 100 = <tspan font-weight="bold" fill="#2e7d32">-16</tspan></text>
+  <text x="70" y="752" font-weight="bold" fill="#13294b">Contract total = 144</text>
+</g>
+
+<!-- Legend -->
+<rect x="50" y="790" width="390" height="166" rx="10" fill="#ffffff" stroke="#5a6472" stroke-width="1"/>
+<text x="70" y="818" font-size="17" font-weight="bold" fill="#13294b">How to read it</text>
+<line x1="70" y1="846" x2="118" y2="846" stroke="#0e7c86" stroke-width="3" marker-end="url(#at)"/>
+<text x="132" y="851" font-size="15" fill="#1e232d">main path</text>
+<line x1="70" y1="878" x2="118" y2="878" stroke="#e6961e" stroke-width="3" marker-end="url(#aa)"/>
+<text x="132" y="883" font-size="15" fill="#1e232d">yes = skip: no entry made,</text>
+<text x="132" y="902" font-size="15" fill="#1e232d">but the pointer still moves</text>
+<rect x="72" y="920" width="44" height="18" rx="3" fill="#e6f4ea" stroke="#2e7d32" stroke-width="2"/>
+<text x="132" y="934" font-size="15" fill="#1e232d">new Royalty Ledger Entry (50102)</text>
+
+<!-- ===== Column B: loop + checks ===== -->
+<rect x="500" y="122" width="440" height="62" rx="10" fill="#13294b"/>
+<circle cx="524" cy="153" r="13" fill="#ffffff"/><text x="524" y="158" font-size="15" font-weight="bold" fill="#13294b" text-anchor="middle">4</text>
+<text x="548" y="148" font-size="18" font-weight="bold" fill="#ffffff">FindSet(): first value entry (runs once)</text>
+<text x="548" y="171" font-size="15" fill="#ffffff">ProcessValueEntry runs checks A to F</text>
+<line x1="720" y1="184" x2="720" y2="203" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#at)"/>
+
+<g fill="#fdf1dc" stroke="#e6961e" stroke-width="2">
+  <polygon points="720,205 940,240 720,275 500,240"/>
+  <polygon points="720,291 940,326 720,361 500,326"/>
+  <polygon points="720,377 940,412 720,447 500,412"/>
+  <polygon points="720,463 940,498 720,533 500,498"/>
+  <polygon points="720,549 940,584 720,619 500,584"/>
+  <polygon points="720,635 940,670 720,705 500,670"/>
+</g>
+<g id="dtext" font-size="17" font-weight="bold" fill="#13294b" text-anchor="middle">
+  <text x="720" y="246">Sales Amount (Actual) = 0?</text>
+  <text x="720" y="323">Item not found?</text>
+  <text x="720" y="341" font-size="15" font-weight="normal" fill="#5a6472">Item.Get fails</text>
+  <text x="720" y="409">No contract on the item?</text>
+  <text x="720" y="427" font-size="15" font-weight="normal" fill="#5a6472">RYL Royalty Contract No. blank</text>
+  <text x="720" y="495">Contract not found?</text>
+  <text x="720" y="513" font-size="15" font-weight="normal" fill="#5a6472">RoyaltyContract.Get fails</text>
+  <text x="720" y="581">Contract does not cover</text>
+  <text x="720" y="599">the Posting Date?</text>
+  <text x="720" y="667">Royalty entry exists?</text>
+  <text x="720" y="685" font-size="15" font-weight="normal" fill="#5a6472">for this Value Entry No.</text>
+</g>
+
+<!-- check letters -->
+<g font-size="15" font-weight="bold" fill="#e6961e" text-anchor="middle">
+  <circle cx="480" cy="240" r="13" fill="#ffffff" stroke="#e6961e" stroke-width="2"/><text x="480" y="245">A</text>
+  <circle cx="480" cy="326" r="13" fill="#ffffff" stroke="#e6961e" stroke-width="2"/><text x="480" y="331">B</text>
+  <circle cx="480" cy="412" r="13" fill="#ffffff" stroke="#e6961e" stroke-width="2"/><text x="480" y="417">C</text>
+  <circle cx="480" cy="498" r="13" fill="#ffffff" stroke="#e6961e" stroke-width="2"/><text x="480" y="503">D</text>
+  <circle cx="480" cy="584" r="13" fill="#ffffff" stroke="#e6961e" stroke-width="2"/><text x="480" y="589">E</text>
+  <circle cx="480" cy="670" r="13" fill="#ffffff" stroke="#e6961e" stroke-width="2"/><text x="480" y="675">F</text>
+</g>
+
+<!-- no arrows -->
+<g stroke="#0e7c86" stroke-width="2.5">
+  <line x1="720" y1="275" x2="720" y2="289" marker-end="url(#at)"/>
+  <line x1="720" y1="361" x2="720" y2="375" marker-end="url(#at)"/>
+  <line x1="720" y1="447" x2="720" y2="461" marker-end="url(#at)"/>
+  <line x1="720" y1="533" x2="720" y2="547" marker-end="url(#at)"/>
+  <line x1="720" y1="619" x2="720" y2="633" marker-end="url(#at)"/>
+  <line x1="720" y1="705" x2="720" y2="729" marker-end="url(#at)"/>
+</g>
+<g font-size="14" font-weight="bold" fill="#0e7c86">
+  <text x="730" y="288">no</text><text x="730" y="374">no</text><text x="730" y="460">no</text>
+  <text x="730" y="546">no</text><text x="730" y="632">no</text><text x="730" y="722">no</text>
+</g>
+
+<!-- yes = skip arrows into amber bus x=1008 -->
+<g stroke="#e6961e" stroke-width="2.5" fill="none">
+  <line x1="940" y1="240" x2="1008" y2="240"/>
+  <line x1="940" y1="326" x2="1008" y2="326"/>
+  <line x1="940" y1="412" x2="1008" y2="412"/>
+  <line x1="940" y1="498" x2="1008" y2="498"/>
+  <line x1="940" y1="584" x2="1008" y2="584"/>
+  <line x1="940" y1="670" x2="1008" y2="670"/>
+  <polyline points="1008,240 1008,747 1028,747" marker-end="url(#aa)"/>
+</g>
+<g font-size="14" font-weight="bold" fill="#e6961e" text-anchor="middle">
+  <text x="973" y="233">yes, skip</text><text x="973" y="319">yes, skip</text><text x="973" y="405">yes, skip</text>
+  <text x="973" y="491">yes, skip</text><text x="973" y="577">yes, skip</text><text x="973" y="663">yes, skip</text>
+</g>
+
+<!-- Create box -->
+<rect x="500" y="731" width="490" height="228" rx="10" fill="#e6f4ea" stroke="#2e7d32" stroke-width="2.5"/>
+<circle cx="524" cy="755" r="13" fill="#2e7d32"/><text x="524" y="760" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+<text x="548" y="761" font-size="18" font-weight="bold" fill="#2e7d32">Create Royalty Ledger Entry</text>
+<g font-size="15" fill="#1e232d">
+  <text x="518" y="785">Contract No., Royalty Rate % = from the item's contract</text>
+  <text x="518" y="804">Value Entry No., Item No., Posting Date, Document</text>
+  <text x="518" y="823">Type / No. / Line No. = from the value entry</text>
+  <text x="518" y="842">Customer No. = Source No.</text>
+  <text x="760" y="842">Created At = CurrentDateTime</text>
+  <text x="518" y="861">Quantity = -Invoiced Quantity</text>
+  <text x="518" y="880">Sales Amount (LCY) = Sales Amount (Actual)</text>
+</g>
+<rect x="514" y="889" width="462" height="61" rx="5" fill="#ffffff" stroke="#2e7d32" stroke-width="1"/>
+<g font-family="Consolas, monospace" font-size="14" fill="#13294b" font-weight="bold">
+  <text x="524" y="906">Royalty Amount (LCY) = RoundAmount(</text>
+  <text x="544" y="923">Sales Amount (Actual) * Royalty Rate % / 100)</text>
+</g>
+<text x="524" y="942" font-size="15" fill="#5a6472">rounded to G/L Setup Amount Rounding Precision</text>
+
+<!-- create -> pointer -->
+<polyline points="990,845 1100,845 1100,794" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#at)"/>
+
+<!-- ===== Column C ===== -->
+<rect x="1030" y="212" width="310" height="215" rx="10" fill="#eef3f7" stroke="#13294b" stroke-width="1.5"/>
+<text x="1050" y="240" font-size="17" font-weight="bold" fill="#13294b">The pointer (RYL Royalty Setup)</text>
+<text x="1050" y="264" font-family="Consolas, monospace" font-size="14" fill="#1e232d">"Last Processed Value Entry No."</text>
+<g font-size="15" fill="#1e232d">
+  <text x="1050" y="293">- Moves on every value entry read,</text>
+  <text x="1062" y="312">skipped ones too</text>
+  <text x="1050" y="338">- Saved at the end if it moved (8)</text>
+  <text x="1050" y="364">- Editable. Setting it back is safe:</text>
+  <text x="1062" y="383">check F and the unique key on</text>
+  <text x="1062" y="402">Value Entry No. stop duplicates</text>
+</g>
+
+<rect x="1030" y="470" width="310" height="170" rx="10" fill="#fdf1dc" stroke="#e6961e" stroke-width="1.5"/>
+<text x="1050" y="498" font-size="17" font-weight="bold" fill="#13294b">Check E: ContractCovers = false</text>
+<g font-size="15" fill="#1e232d">
+  <text x="1050" y="525">- Blocked = Yes</text>
+  <text x="1050" y="548">- Posting Date before Starting Date</text>
+  <text x="1050" y="571">- Posting Date after Ending Date</text>
+  <text x="1050" y="600" fill="#5a6472">A blank Starting or Ending Date</text>
+  <text x="1050" y="621" fill="#5a6472">means no limit on that side.</text>
+</g>
+
+<rect x="1030" y="702" width="230" height="90" rx="10" fill="#e1f0f1" stroke="#0e7c86" stroke-width="2"/>
+<circle cx="1054" cy="727" r="13" fill="#0e7c86"/><text x="1054" y="732" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+<text x="1076" y="733" font-size="18" font-weight="bold" fill="#13294b">Move pointer</text>
+<g font-family="Consolas, monospace" font-size="14" fill="#1e232d">
+  <text x="1046" y="759">LastEntryNo :=</text>
+  <text x="1066" y="778">ValueEntry."Entry No."</text>
+</g>
+
+<line x1="1260" y1="747" x2="1298" y2="747" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#at)"/>
+
+<polygon points="1410,692 1520,747 1410,802 1300,747" fill="#e1f0f1" stroke="#0e7c86" stroke-width="2"/>
+<circle cx="1410" cy="717" r="12" fill="#0e7c86"/><text x="1410" y="722" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+<text x="1410" y="752" font-size="17" font-weight="bold" fill="#13294b" text-anchor="middle">More entries?</text>
+<text x="1410" y="773" font-family="Consolas, monospace" font-size="14" fill="#1e232d" text-anchor="middle">Next() &lt;&gt; 0</text>
+
+<!-- yes: loop straight back to check A (FindSet is not run again) -->
+<polyline points="1410,692 1410,194 720,194" fill="none" stroke="#0e7c86" stroke-width="2.5"/>
+<circle cx="720" cy="194" r="4.5" fill="#0e7c86"/>
+<text x="1422" y="540" font-size="15" font-weight="bold" fill="#0e7c86">yes: Next()</text>
+<text x="1422" y="560" font-size="15" font-weight="bold" fill="#0e7c86">moves to the</text>
+<text x="1422" y="580" font-size="15" font-weight="bold" fill="#0e7c86">next entry,</text>
+<text x="1422" y="600" font-size="15" font-weight="bold" fill="#0e7c86">back to A</text>
+
+<!-- none found: FindSet false -> straight to the end -->
+<polyline points="940,153 1545,153 1545,826" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#at)"/>
+<text x="1110" y="144" font-size="15" font-weight="bold" fill="#0e7c86">none found: FindSet() = false, skip the loop</text>
+
+<line x1="1410" y1="802" x2="1410" y2="826" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#at)"/>
+<text x="1420" y="820" font-size="14" font-weight="bold" fill="#0e7c86">no</text>
+
+<rect x="1140" y="828" width="415" height="127" rx="10" fill="#13294b"/>
+<circle cx="1164" cy="853" r="13" fill="#ffffff"/><text x="1164" y="858" font-size="15" font-weight="bold" fill="#13294b" text-anchor="middle">8</text>
+<text x="1188" y="859" font-size="18" font-weight="bold" fill="#ffffff">End: save the pointer if it moved</text>
+<g font-family="Consolas, monospace" font-size="14" fill="#ffffff">
+  <text x="1158" y="885">if LastEntryNo changed then</text>
+  <text x="1178" y="904">"Last Processed Value Entry No."</text>
+  <text x="1198" y="923">:= LastEntryNo; Modify();</text>
+</g>
+<text x="1158" y="945" font-size="15" fill="#e1f0f1">Returns EntriesCreated (count of new entries)</text>
+</svg>

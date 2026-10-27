@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="Segoe UI, Arial, sans-serif">
+<title>From approved statement to the G/L</title>
+<defs>
+<marker id="aT" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0e7c86"/></marker>
+<marker id="aG" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2e7d32"/></marker>
+<marker id="aR" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#c62828"/></marker>
+</defs>
+<rect x="0" y="0" width="1600" height="1000" fill="#ffffff"/>
+
+<text x="50" y="60" font-size="34" font-weight="bold" fill="#13294b">From approved statement to the G/L</text>
+<text x="50" y="92" font-size="18" fill="#5a6472">Codeunit 50102 "RYL Accrual Journal" only prepares journal lines. Finance previews and posts them.</text>
+
+<!-- LEFT: CreateLines guards -->
+<text x="50" y="132" font-size="20" font-weight="bold" fill="#13294b">CreateLines: checks in order</text>
+<text x="50" y="154" font-size="15" fill="#5a6472">Every check must pass. Any fail = error, nothing created.</text>
+
+<g font-size="15" fill="#1e232d">
+<rect x="50" y="168" width="330" height="70" rx="8" fill="#fdf1dc" stroke="#e6961e" stroke-width="2"/>
+<circle cx="76" cy="193" r="13" fill="#e6961e"/><text x="76" y="198" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<text x="100" y="199" font-size="17" font-weight="bold" fill="#13294b">Statement Approved?</text>
+<text x="100" y="223" font-family="Consolas, monospace" font-size="14" fill="#5a6472">Status = Approved</text>
+
+<rect x="50" y="268" width="330" height="70" rx="8" fill="#fdf1dc" stroke="#e6961e" stroke-width="2"/>
+<circle cx="76" cy="293" r="13" fill="#e6961e"/><text x="76" y="298" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="100" y="299" font-size="17" font-weight="bold" fill="#13294b">Royalty Setup filled?</text>
+<text x="100" y="323">template, batch, 3 G/L accounts</text>
+
+<rect x="50" y="368" width="330" height="130" rx="8" fill="#fdf1dc" stroke="#e6961e" stroke-width="2"/>
+<circle cx="76" cy="393" r="13" fill="#e6961e"/><text x="76" y="398" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+<text x="100" y="399" font-size="17" font-weight="bold" fill="#13294b">Batch plain?</text>
+<text x="100" y="423">Bal. Account No. blank</text>
+<text x="100" y="445">No. Series blank</text>
+<text x="100" y="467">Posting No. Series blank</text>
+<text x="100" y="489">Copy VAT Setup to Jnl. Lines off</text>
+
+<rect x="50" y="528" width="330" height="70" rx="8" fill="#fdf1dc" stroke="#e6961e" stroke-width="2"/>
+<circle cx="76" cy="553" r="13" fill="#e6961e"/><text x="76" y="558" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+<text x="100" y="559" font-size="17" font-weight="bold" fill="#13294b">Not in the G/L yet?</text>
+<text x="100" y="583">no G/L Entry with this Document No.</text>
+
+<rect x="50" y="628" width="330" height="70" rx="8" fill="#fdf1dc" stroke="#e6961e" stroke-width="2"/>
+<circle cx="76" cy="653" r="13" fill="#e6961e"/><text x="76" y="658" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">5</text>
+<text x="100" y="659" font-size="17" font-weight="bold" fill="#13294b">Not in the batch yet?</text>
+<text x="100" y="683">no journal line with this Document No.</text>
+
+<rect x="50" y="728" width="330" height="62" rx="8" fill="#e6f4ea" stroke="#2e7d32" stroke-width="2"/>
+<path d="M66,758 l7,8 l14,-16" fill="none" stroke="#2e7d32" stroke-width="3"/>
+<text x="100" y="755" font-size="17" font-weight="bold" fill="#2e7d32">Create up to 3 lines</text>
+<text x="100" y="778">InsertLine, only non-zero amounts</text>
+</g>
+
+<g stroke="#2e7d32" stroke-width="2.5" marker-end="url(#aG)">
+<line x1="215" y1="238" x2="215" y2="266"/><line x1="215" y1="338" x2="215" y2="366"/>
+<line x1="215" y1="498" x2="215" y2="526"/><line x1="215" y1="598" x2="215" y2="626"/>
+<line x1="215" y1="698" x2="215" y2="726"/>
+</g>
+<g font-size="14" font-weight="bold" fill="#2e7d32">
+<text x="225" y="258">OK</text><text x="225" y="358">OK</text><text x="225" y="518">OK</text><text x="225" y="618">OK</text><text x="225" y="718">OK</text>
+</g>
+
+<g stroke="#c62828" stroke-width="2.5" marker-end="url(#aR)">
+<line x1="380" y1="203" x2="406" y2="203"/><line x1="380" y1="303" x2="406" y2="303"/>
+<line x1="380" y1="433" x2="406" y2="433"/><line x1="380" y1="563" x2="406" y2="563"/>
+<line x1="380" y1="663" x2="406" y2="663"/>
+</g>
+<g font-size="15" fill="#c62828" text-anchor="middle">
+<rect x="408" y="178" width="122" height="50" rx="6" fill="#fdecea" stroke="#c62828" stroke-width="1.5"/>
+<text x="469" y="199" font-weight="bold">Error, stop</text><text x="469" y="219">not Approved</text>
+<rect x="408" y="278" width="122" height="50" rx="6" fill="#fdecea" stroke="#c62828" stroke-width="1.5"/>
+<text x="469" y="299" font-weight="bold">Error, stop</text><text x="469" y="319">field is empty</text>
+<rect x="408" y="408" width="122" height="50" rx="6" fill="#fdecea" stroke="#c62828" stroke-width="1.5"/>
+<text x="469" y="429" font-weight="bold">Error, stop</text><text x="469" y="449">batch not plain</text>
+<rect x="408" y="538" width="122" height="50" rx="6" fill="#fdecea" stroke="#c62828" stroke-width="1.5"/>
+<text x="469" y="559" font-weight="bold">Error, stop</text><text x="469" y="579">already posted</text>
+<rect x="408" y="638" width="122" height="50" rx="6" fill="#fdecea" stroke="#c62828" stroke-width="1.5"/>
+<text x="469" y="659" font-weight="bold">Error, stop</text><text x="469" y="679">already in batch</text>
+</g>
+
+<path d="M380,759 L550,759 L550,188 L566,188" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#aT)"/>
+
+<!-- MIDDLE: journal lines -->
+<text x="570" y="132" font-size="20" font-weight="bold" fill="#13294b">The journal lines (up to 3)</text>
+<text x="570" y="154" font-size="15" fill="#5a6472">Example: earned 500, recouped 200, payable 300</text>
+
+<rect x="570" y="168" width="510" height="40" fill="#13294b"/>
+<g font-size="16" font-weight="bold" fill="#ffffff">
+<text x="584" y="194">Account (from Royalty Setup)</text>
+<text x="936" y="194" text-anchor="end">Amount</text>
+<text x="964" y="194">Debit / Credit</text>
+</g>
+<rect x="570" y="208" width="510" height="64" fill="#ffffff" stroke="#c9d3dd"/>
+<rect x="570" y="272" width="510" height="64" fill="#eef3f7" stroke="#c9d3dd"/>
+<rect x="570" y="336" width="510" height="64" fill="#ffffff" stroke="#c9d3dd"/>
+<rect x="570" y="400" width="510" height="50" fill="#e6f4ea" stroke="#2e7d32" stroke-width="2"/>
+<line x1="950" y1="208" x2="950" y2="450" stroke="#c9d3dd"/>
+<line x1="830" y1="208" x2="830" y2="450" stroke="#c9d3dd"/>
+
+<g font-size="17" font-weight="bold" fill="#13294b">
+<text x="584" y="235">Royalty Expense Account</text>
+<text x="584" y="299">Advance Paid Account</text>
+<text x="584" y="363">Accrued Royalties Account</text>
+</g>
+<g font-family="Consolas, monospace" font-size="14" fill="#5a6472">
+<text x="584" y="258">"Earned Amount (LCY)"</text>
+<text x="584" y="322">-"Recouped Amount (LCY)"</text>
+<text x="584" y="386">-"Payable Amount (LCY)"</text>
+</g>
+<g font-size="22" font-weight="bold" text-anchor="end">
+<text x="936" y="248" fill="#13294b">500</text>
+<text x="936" y="312" fill="#0e7c86">-200</text>
+<text x="936" y="376" fill="#0e7c86">-300</text>
+</g>
+<g font-size="17" font-weight="bold">
+<text x="964" y="246" fill="#13294b">Debit</text>
+<text x="964" y="310" fill="#0e7c86">Credit</text>
+<text x="964" y="374" fill="#0e7c86">Credit</text>
+</g>
+<text x="584" y="431" font-size="17" font-weight="bold" fill="#2e7d32">Total</text>
+<text x="936" y="433" font-size="22" font-weight="bold" fill="#2e7d32" text-anchor="end">0</text>
+<path d="M962,424 l6,7 l12,-14" fill="none" stroke="#2e7d32" stroke-width="3"/>
+<text x="988" y="431" font-size="17" font-weight="bold" fill="#2e7d32">balanced</text>
+
+<text x="584" y="474" font-size="15" fill="#2e7d32">Always 0, because Payable = Earned - Recouped (Recalculate)</text>
+
+<rect x="570" y="488" width="510" height="60" rx="8" fill="#fdf1dc" stroke="#e6961e" stroke-width="2"/>
+<g font-size="15" fill="#1e232d">
+<text x="586" y="511"><tspan font-weight="bold">Debit / Credit is for this example.</tspan> Signs can flip:</text>
+<text x="586" y="535">credit period: expense -2,000 = credit, advance +2,000 = debit</text>
+</g>
+
+<rect x="570" y="562" width="510" height="110" rx="8" fill="#e1f0f1" stroke="#0e7c86" stroke-width="2"/>
+<text x="586" y="587" font-size="17" font-weight="bold" fill="#0e7c86">Same on every line</text>
+<g font-size="15" fill="#1e232d">
+<text x="586" y="612">Posting Date = Period End</text>
+<text x="586" y="634">Document No. = statement No.</text>
+<text x="586" y="656">Account Type = G/L Account</text>
+</g>
+<line x1="830" y1="576" x2="830" y2="660" stroke="#0e7c86" stroke-opacity="0.4"/>
+<text x="848" y="587" font-size="17" font-weight="bold" fill="#0e7c86">Amount sign</text>
+<g font-size="15" fill="#1e232d">
+<text x="848" y="612">positive = debit</text>
+<text x="848" y="634">negative = credit</text>
+<text x="848" y="656">so -200 = credit 200</text>
+</g>
+
+<rect x="570" y="688" width="510" height="94" rx="8" fill="#eef3f7" stroke="#13294b" stroke-width="1.5"/>
+<text x="586" y="714" font-size="17" font-weight="bold" fill="#13294b">Amount is 0? That line is skipped.</text>
+<g font-size="15" fill="#1e232d">
+<text x="586" y="740">Example: earned 12,000, all 12,000 recouped,</text>
+<text x="586" y="762">payable 0. Only 2 lines are created.</text>
+</g>
+
+<path d="M1060,168 L1060,126 L1132,126" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#aT)"/>
+<text x="1096" y="116" font-size="16" font-weight="bold" fill="#0e7c86" text-anchor="middle">Post</text>
+
+<!-- RIGHT: T-accounts -->
+<text x="1140" y="132" font-size="20" font-weight="bold" fill="#13294b">After Post: the G/L</text>
+<text x="1140" y="154" font-size="15" fill="#5a6472">Drawn as T-accounts. Debit left, Credit right.</text>
+
+<text x="1345" y="198" font-size="18" font-weight="bold" fill="#13294b" text-anchor="middle">Royalty Expense</text>
+<text x="1345" y="220" font-size="15" fill="#5a6472" text-anchor="middle">expense</text>
+<line x1="1150" y1="232" x2="1540" y2="232" stroke="#13294b" stroke-width="3"/>
+<line x1="1345" y1="232" x2="1345" y2="318" stroke="#13294b" stroke-width="3"/>
+<text x="1160" y="254" font-size="15" fill="#5a6472">Dr</text><text x="1530" y="254" font-size="15" fill="#5a6472" text-anchor="end">Cr</text>
+<text x="1247" y="292" font-size="24" font-weight="bold" fill="#13294b" text-anchor="middle">500</text>
+<text x="1345" y="344" font-size="15" fill="#1e232d" text-anchor="middle">the royalty cost of this period</text>
+
+<text x="1345" y="400" font-size="18" font-weight="bold" fill="#13294b" text-anchor="middle">Advance Paid</text>
+<text x="1345" y="422" font-size="15" fill="#5a6472" text-anchor="middle">prepayment (asset)</text>
+<line x1="1150" y1="434" x2="1540" y2="434" stroke="#13294b" stroke-width="3"/>
+<line x1="1345" y1="434" x2="1345" y2="520" stroke="#13294b" stroke-width="3"/>
+<text x="1160" y="456" font-size="15" fill="#5a6472">Dr</text><text x="1530" y="456" font-size="15" fill="#5a6472" text-anchor="end">Cr</text>
+<text x="1443" y="494" font-size="24" font-weight="bold" fill="#0e7c86" text-anchor="middle">200</text>
+<text x="1345" y="546" font-size="15" fill="#1e232d" text-anchor="middle">part of the prepaid advance is used up</text>
+
+<text x="1345" y="602" font-size="18" font-weight="bold" fill="#13294b" text-anchor="middle">Accrued Royalties</text>
+<text x="1345" y="624" font-size="15" fill="#5a6472" text-anchor="middle">liability</text>
+<line x1="1150" y1="636" x2="1540" y2="636" stroke="#13294b" stroke-width="3"/>
+<line x1="1345" y1="636" x2="1345" y2="722" stroke="#13294b" stroke-width="3"/>
+<text x="1160" y="658" font-size="15" fill="#5a6472">Dr</text><text x="1530" y="658" font-size="15" fill="#5a6472" text-anchor="end">Cr</text>
+<text x="1443" y="696" font-size="24" font-weight="bold" fill="#0e7c86" text-anchor="middle">300</text>
+<text x="1345" y="748" font-size="15" fill="#1e232d" text-anchor="middle">what we now owe the licensor in cash</text>
+<text x="1345" y="784" font-size="15" font-weight="bold" fill="#2e7d32" text-anchor="middle">Debits 500 = Credits 200 + 300</text>
+
+<!-- BOTTOM STRIP -->
+<rect x="40" y="810" width="1520" height="150" rx="10" fill="#eef3f7"/>
+<text x="60" y="838" font-size="18" font-weight="bold" fill="#13294b">From journal to G/L</text>
+
+<g font-size="15" fill="#1e232d">
+<rect x="60" y="852" width="230" height="92" rx="8" fill="#e1f0f1" stroke="#0e7c86" stroke-width="2"/>
+<circle cx="83" cy="878" r="13" fill="#0e7c86"/><text x="83" y="883" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<text x="104" y="884" font-size="17" font-weight="bold" fill="#13294b">CreateLines</text>
+<text x="74" y="910">action Create Accrual</text><text x="74" y="931">Journal Lines (page 50105)</text>
+
+<rect x="326" y="852" width="230" height="92" rx="8" fill="#e1f0f1" stroke="#0e7c86" stroke-width="2"/>
+<circle cx="349" cy="878" r="13" fill="#0e7c86"/><text x="349" y="883" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="370" y="884" font-size="17" font-weight="bold" fill="#13294b">OpenJournal</text>
+<text x="340" y="910">opens General Journal</text><text x="340" y="931">on the accrual batch</text>
+
+<rect x="592" y="852" width="230" height="92" rx="8" fill="#ffffff" stroke="#13294b" stroke-width="2"/>
+<circle cx="615" cy="878" r="13" fill="#13294b"/><text x="615" y="883" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+<text x="636" y="884" font-size="17" font-weight="bold" fill="#13294b">Preview Posting</text>
+<text x="606" y="910">Finance checks the result,</text><text x="606" y="931">nothing is saved</text>
+
+<rect x="858" y="852" width="230" height="92" rx="8" fill="#ffffff" stroke="#13294b" stroke-width="2"/>
+<circle cx="881" cy="878" r="13" fill="#13294b"/><text x="881" y="883" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+<text x="902" y="884" font-size="17" font-weight="bold" fill="#13294b">Post</text>
+<text x="872" y="910">Finance posts the batch</text><text x="872" y="931">(a person, not the code)</text>
+
+<rect x="1124" y="852" width="230" height="92" rx="8" fill="#e6f4ea" stroke="#2e7d32" stroke-width="2"/>
+<circle cx="1147" cy="878" r="13" fill="#2e7d32"/><text x="1147" y="883" font-weight="bold" fill="#fff" text-anchor="middle">5</text>
+<text x="1168" y="884" font-size="17" font-weight="bold" fill="#13294b">G/L Entries</text>
+<text x="1138" y="910">Document No. =</text><text x="1138" y="931">statement No.</text>
+</g>
+<g stroke="#0e7c86" stroke-width="2.5" marker-end="url(#aT)">
+<line x1="292" y1="898" x2="322" y2="898"/><line x1="558" y1="898" x2="588" y2="898"/>
+<line x1="824" y1="898" x2="854" y2="898"/><line x1="1090" y1="898" x2="1120" y2="898"/>
+</g>
+
+<rect x="1384" y="852" width="160" height="92" rx="8" fill="#fdf1dc" stroke="#e6961e" stroke-width="2.5"/>
+<g font-size="17" font-weight="bold" fill="#13294b" text-anchor="middle">
+<text x="1464" y="882">Nothing is</text><text x="1464" y="904">posted by</text><text x="1464" y="926">the code</text>
+</g>
+</svg>

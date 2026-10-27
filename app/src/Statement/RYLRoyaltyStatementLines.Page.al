@@ -26,4 +26,18 @@ page 50107 "RYL Royalty Statement Lines"
             }
         }
     }
+
+    // A new statement has no No. yet. Its link filter is then "Statement No." = '',
+    // which would list every entry not on a statement, so show nothing until the No. exists.
+    trigger OnFindRecord(Which: Text): Boolean
+    var
+        StatementNoFilter: Text;
+    begin
+        Rec.FilterGroup(4);
+        StatementNoFilter := Rec.GetFilter("Statement No.");
+        Rec.FilterGroup(0);
+        if StatementNoFilter = '''''' then
+            exit(false);
+        exit(Rec.Find(Which));
+    end;
 }

@@ -2,7 +2,7 @@
   "id": "df11d72a-db7d-4504-bb5b-a70208a06ce2",
   "name": "Royalty Accrual Sample",
   "publisher": "Prabin Bhusal",
-  "version": "1.0.0.0",
+  "version": "1.0.0.1",
   "brief": "Sample extension: royalties from posted sales, statement approval, accrual journal.",
   "description": "Sample BC extension for royalties on licensed merchandise. Calculates royalty from posted sales invoices and credit memos, recoups the advance, approves statements with an audit log and creates accrual journal lines to preview and post.",
   "help": "https://github.com/Seewulf/BC-Royalty-Accrual-Sample",

@@ -247,6 +247,28 @@ codeunit 50153 "RYL Statement Approval Tests"
         Assert.AreEqual(50, Statement2."Earned Amount (LCY)", 'late royalty');
     end;
 
+    [Test]
+    procedure NewStatementShowsNoEntriesBeforeItHasANumber()
+    var
+        RoyaltyContract: Record "RYL Royalty Contract";
+        Item: Record Item;
+        RoyaltyStatement: TestPage "RYL Royalty Statement";
+    begin
+        // [SCENARIO] A new statement has no No. yet. Its Entries part must stay empty even when unassigned entries exist.
+        TestLibrary.InitSetup();
+        TestLibrary.CreateContract(RoyaltyContract, 8, 0);
+        TestLibrary.CreateRoyaltyItem(Item, RoyaltyContract."No.");
+        TestLibrary.PostSale(Item."No.", 1, 100, WorkDate());
+        TestLibrary.RunCalculation();
+
+        // [WHEN] A new statement card is opened
+        RoyaltyStatement.OpenNew();
+
+        // [THEN] The Entries part shows nothing
+        Assert.IsFalse(RoyaltyStatement.Lines.First(), 'entries shown on a statement without a No.');
+        RoyaltyStatement.Close();
+    end;
+
     local procedure CheckAuditEntry(StatementAuditEntry: Record "RYL Statement Audit Entry"; OldStatus: Enum "RYL Statement Status"; NewStatus: Enum "RYL Statement Status")
     begin
         Assert.AreEqual(OldStatus, StatementAuditEntry."Old Status", 'old status');

@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="Segoe UI, Arial, sans-serif">
+<title>A statement from Draft to Approved</title>
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#0e7c86"/>
+  </marker>
+  <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#e6961e"/>
+  </marker>
+  <g id="audit">
+    <rect x="-78" y="-13" width="156" height="26" rx="13" fill="#ffffff" stroke="#0e7c86" stroke-width="1.5"/>
+    <rect x="-66" y="-7" width="11" height="14" rx="1.5" fill="#e1f0f1" stroke="#0e7c86" stroke-width="1.3"/>
+    <line x1="-63.5" y1="-3" x2="-57.5" y2="-3" stroke="#0e7c86" stroke-width="1.2"/>
+    <line x1="-63.5" y1="0" x2="-57.5" y2="0" stroke="#0e7c86" stroke-width="1.2"/>
+    <line x1="-63.5" y1="3" x2="-57.5" y2="3" stroke="#0e7c86" stroke-width="1.2"/>
+    <text x="-48" y="5" font-size="13" fill="#0e7c86" font-weight="600">audit entry written</text>
+  </g>
+  <g id="xmark">
+    <circle r="9" fill="#fdecea" stroke="#c62828" stroke-width="1.5"/>
+    <line x1="-4" y1="-4" x2="4" y2="4" stroke="#c62828" stroke-width="2"/>
+    <line x1="4" y1="-4" x2="-4" y2="4" stroke="#c62828" stroke-width="2"/>
+  </g>
+  <g id="okmark">
+    <circle r="9" fill="#e6f4ea" stroke="#2e7d32" stroke-width="1.5"/>
+    <polyline points="-4.5,0 -1.5,3.5 4.5,-3.5" fill="none" stroke="#2e7d32" stroke-width="2"/>
+  </g>
+  <g id="dot"><circle r="3.5" fill="#e6961e"/></g>
+</defs>
+
+<rect x="0" y="0" width="1600" height="1000" fill="#ffffff"/>
+
+<!-- title -->
+<text x="50" y="60" font-size="34" font-weight="bold" fill="#13294b">A statement from Draft to Approved</text>
+<text x="50" y="92" font-size="18" fill="#5a6472">Table 50103 RYL Royalty Statement, field Status (enum 50100). Status buttons call codeunit 50101 RYL Statement Management.</text>
+
+<!-- 1 new statement -->
+<circle cx="230" cy="160" r="13" fill="#13294b"/>
+<line x1="230" y1="174" x2="230" y2="406" stroke="#0e7c86" stroke-width="3" marker-end="url(#arr)"/>
+<circle cx="230" cy="250" r="12" fill="#0e7c86"/>
+<text x="230" y="255" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="208" y="256" font-size="17" font-weight="bold" fill="#13294b" text-anchor="end">New statement</text>
+<text x="208" y="282" font-size="15" fill="#1e232d" text-anchor="end">OnInsert: No. taken</text>
+<text x="208" y="303" font-size="15" fill="#1e232d" text-anchor="end">from setup field</text>
+<text x="208" y="324" font-size="15" font-weight="600" fill="#1e232d" text-anchor="end">Statement Nos.</text>
+
+<!-- states -->
+<rect x="130" y="410" width="200" height="160" rx="22" fill="#eef3f7" stroke="#13294b" stroke-width="3"/>
+<text x="230" y="478" font-size="30" font-weight="bold" fill="#13294b" text-anchor="middle">Draft</text>
+<text x="230" y="508" font-size="15" fill="#5a6472" text-anchor="middle">can still change</text>
+
+<rect x="540" y="410" width="200" height="160" rx="22" fill="#e1f0f1" stroke="#13294b" stroke-width="3"/>
+<text x="640" y="478" font-size="30" font-weight="bold" fill="#13294b" text-anchor="middle">Reviewed</text>
+<text x="640" y="508" font-size="15" fill="#5a6472" text-anchor="middle">figures checked</text>
+
+<rect x="930" y="410" width="200" height="160" rx="22" fill="#e6f4ea" stroke="#2e7d32" stroke-width="3"/>
+<!-- lock -->
+<path d="M1019,451 v-9 a11,11 0 0 1 22,0 v9" fill="none" stroke="#2e7d32" stroke-width="4"/>
+<rect x="1012" y="450" width="36" height="28" rx="4" fill="#2e7d32"/>
+<circle cx="1030" cy="461" r="4" fill="#e6f4ea"/>
+<rect x="1028.5" y="463" width="3" height="8" fill="#e6f4ea"/>
+<text x="1030" y="516" font-size="28" font-weight="bold" fill="#2e7d32" text-anchor="middle">Approved</text>
+<text x="1030" y="542" font-size="15" fill="#5a6472" text-anchor="middle">frozen for good</text>
+
+<!-- 3 Mark as Reviewed (forward): label and pill above the shaft -->
+<circle cx="360" cy="399" r="12" fill="#0e7c86"/>
+<text x="360" y="404" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text x="380" y="405" font-size="17" font-weight="bold" fill="#13294b">Mark as Reviewed</text>
+<use href="#audit" x="435" y="435"/>
+<line x1="332" y1="460" x2="536" y2="460" stroke="#0e7c86" stroke-width="3" marker-end="url(#arr)"/>
+
+<!-- Reopen (back): label above, pill below the shaft -->
+<text x="440" y="508" font-size="15" fill="#1e232d" text-anchor="middle"><tspan font-weight="bold" fill="#13294b">Reopen:</tspan> clears Reviewed By</text>
+<line x1="538" y1="525" x2="334" y2="525" stroke="#e6961e" stroke-width="3" marker-end="url(#arrA)"/>
+<use href="#audit" x="435" y="550"/>
+
+<!-- 4 Approve: label above, pill below the shaft -->
+<circle cx="800" cy="463" r="12" fill="#0e7c86"/>
+<text x="800" y="468" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text x="820" y="469" font-size="17" font-weight="bold" fill="#13294b">Approve</text>
+<line x1="742" y1="490" x2="926" y2="490" stroke="#0e7c86" stroke-width="3" marker-end="url(#arr)"/>
+<use href="#audit" x="835" y="517"/>
+
+<!-- guard box: Review() -->
+<line x1="435" y1="337" x2="435" y2="384" stroke="#e6961e" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="340" y="132" width="340" height="205" rx="12" fill="#fdf1dc" stroke="#e6961e" stroke-width="2"/>
+<text x="360" y="162" font-size="17" font-weight="bold" fill="#13294b">Checks in <tspan font-family="Consolas, monospace" font-size="16">Review()</tspan></text>
+<use href="#dot" x="366" y="185"/><text x="378" y="190" font-size="15" fill="#1e232d">Status must be Draft</text>
+<use href="#dot" x="366" y="208"/><text x="378" y="213" font-size="15" fill="#1e232d">Contract No. and Period End filled</text>
+<use href="#dot" x="366" y="231"/><text x="378" y="236" font-size="15" fill="#1e232d">At least 1 entry (No. of Entries)</text>
+<use href="#dot" x="366" y="254"/><text x="378" y="259" font-size="15" fill="#1e232d">Recalculate: Earned, Recouped, Payable</text>
+<use href="#dot" x="366" y="277"/><text x="378" y="282" font-size="15" fill="#1e232d">Sets Reviewed By = current user</text>
+<text x="360" y="322" font-size="15" font-weight="600" fill="#c62828">Any check fails: error, stays Draft</text>
+
+<!-- guard box: Approve() -->
+<line x1="835" y1="396" x2="835" y2="450" stroke="#e6961e" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="700" y="132" width="430" height="264" rx="12" fill="#fdf1dc" stroke="#e6961e" stroke-width="2"/>
+<text x="720" y="158" font-size="17" font-weight="bold" fill="#13294b">Checks in <tspan font-family="Consolas, monospace" font-size="16">Approve()</tspan></text>
+<use href="#dot" x="726" y="175"/><text x="738" y="180" font-size="15" fill="#1e232d">Status must be Reviewed</text>
+<use href="#dot" x="726" y="195"/><text x="738" y="200" font-size="15" fill="#1e232d">User Setup: RYL Royalty Approver on</text>
+<use href="#dot" x="726" y="215"/><text x="738" y="220" font-size="15" fill="#1e232d">Royalty Setup: Separate Approver Required on:</text>
+<text x="738" y="240" font-size="15" fill="#1e232d">reviewer cannot approve own statement</text>
+<use href="#dot" x="726" y="255"/><text x="738" y="260" font-size="15" fill="#1e232d">Recalculates Recouped on a copy; it must equal</text>
+<text x="738" y="280" font-size="15" fill="#1e232d">the stored Recouped Amount (LCY). It differs if</text>
+<text x="738" y="300" font-size="15" fill="#1e232d">another statement of the contract was approved</text>
+<text x="738" y="320" font-size="15" fill="#1e232d">after review. Fix: <tspan font-weight="bold" fill="#13294b">Reopen (orange arrow)</tspan>, then</text>
+<text x="738" y="340" font-size="15" fill="#1e232d">Mark as Reviewed again</text>
+<use href="#dot" x="726" y="355"/><text x="738" y="360" font-size="15" fill="#1e232d">Sets Approved By and Approved At</text>
+<text x="720" y="384" font-size="15" font-weight="600" fill="#c62828">Any check fails: error, stays Reviewed</text>
+
+<!-- 2 Collect Entries self loop -->
+<path d="M185,572 C150,660 310,660 275,576" fill="none" stroke="#0e7c86" stroke-width="3" marker-end="url(#arr)"/>
+<circle cx="306" cy="600" r="12" fill="#0e7c86"/>
+<text x="306" y="605" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="326" y="606" font-size="17" font-weight="bold" fill="#13294b">Collect Entries</text>
+<text x="326" y="627" font-size="14" fill="#5a6472">Status stays Draft:</text>
+<text x="326" y="645" font-size="14" fill="#5a6472">no audit entry</text>
+<text x="60" y="672" font-size="14" font-family="Consolas, monospace" fill="#0e7c86">CollectEntries + Recalculate</text>
+<text x="60" y="696" font-size="15" fill="#1e232d">Needs Contract No., Period Start, Period End</text>
+<text x="60" y="716" font-size="15" fill="#1e232d">(Period End not before Period Start)</text>
+<text x="60" y="740" font-size="15" fill="#1e232d">Adds this contract's entries with blank Statement No.</text>
+<text x="60" y="760" font-size="15" fill="#1e232d">and Posting Date up to Period End</text>
+<text x="60" y="782" font-size="15" fill="#1e232d"><tspan font-weight="600">No start limit:</tspan> late postings land here too</text>
+
+<!-- buttons box -->
+<rect x="520" y="600" width="610" height="170" rx="12" fill="#eef3f7" stroke="#13294b" stroke-width="1.5"/>
+<text x="540" y="630" font-size="17" font-weight="bold" fill="#13294b">Buttons on page 50105 RYL Royalty Statement</text>
+<text x="540" y="660" font-size="15" font-weight="bold" fill="#13294b">Draft</text>
+<text x="650" y="660" font-size="15" fill="#1e232d">Collect Entries, Mark as Reviewed</text>
+<text x="540" y="686" font-size="15" font-weight="bold" fill="#13294b">Reviewed</text>
+<text x="650" y="686" font-size="15" fill="#1e232d">Reopen, Approve (asks to confirm first)</text>
+<text x="540" y="712" font-size="15" font-weight="bold" fill="#2e7d32">Approved</text>
+<text x="650" y="712" font-size="15" fill="#1e232d">Create Accrual Journal Lines (codeunit 50102)</text>
+<text x="540" y="746" font-size="15" fill="#5a6472">Each button is enabled only in its status. The codeunit checks again.</text>
+
+<!-- draft note -->
+<rect x="40" y="800" width="560" height="160" rx="12" fill="#fdf1dc" stroke="#e6961e" stroke-width="2"/>
+<text x="60" y="830" font-size="17" font-weight="bold" fill="#13294b">Careful while in Draft</text>
+<use href="#dot" x="66" y="856"/><text x="78" y="861" font-size="15" fill="#1e232d">Change Contract No., Period Start or Period End:</text>
+<text x="78" y="882" font-size="15" fill="#1e232d">collected entries are released, amounts set to 0</text>
+<use href="#dot" x="66" y="905"/><text x="78" y="910" font-size="15" fill="#1e232d">Delete a draft: its entries are released too</text>
+<text x="78" y="938" font-size="15" fill="#5a6472">Released = Statement No. cleared, ready to collect again</text>
+
+<!-- audit legend -->
+<rect x="630" y="800" width="500" height="160" rx="12" fill="#e1f0f1" stroke="#0e7c86" stroke-width="2"/>
+<use href="#audit" x="728" y="830"/>
+<text x="822" y="835" font-size="15" fill="#1e232d">means <tspan font-family="Consolas, monospace" font-size="14">SetStatus()</tspan> inserted</text>
+<text x="650" y="866" font-size="15" fill="#1e232d">one row in table 50104 RYL Statement Audit Entry:</text>
+<text x="650" y="892" font-size="14" font-family="Consolas, monospace" fill="#0e7c86">Statement No., Old Status, New Status,</text>
+<text x="650" y="912" font-size="14" font-family="Consolas, monospace" fill="#0e7c86">User ID, Changed At</text>
+<text x="650" y="940" font-size="15" fill="#5a6472">Written before the status changes, on every change.</text>
+
+<!-- right panel -->
+<rect x="1170" y="132" width="390" height="828" rx="14" fill="#ffffff" stroke="#13294b" stroke-width="2"/>
+<path d="M1170,146 a14,14 0 0 1 14,-14 h362 a14,14 0 0 1 14,14 v42 h-390 z" fill="#13294b"/>
+<path d="M1195,159 v-5 a7,7 0 0 1 14,0 v5" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+<rect x="1190" y="158" width="24" height="18" rx="3" fill="#ffffff"/>
+<text x="1226" y="172" font-size="19" font-weight="bold" fill="#ffffff">What is frozen once Approved</text>
+
+<text x="1190" y="216" font-size="17" font-weight="bold" fill="#13294b">The statement (50103)</text>
+<use href="#xmark" x="1200" y="240"/><text x="1218" y="245" font-size="15" fill="#1e232d">Cannot be modified (or set to Draft)</text>
+<text x="1218" y="264" font-size="14" fill="#5a6472">OnModify reads the stored record</text>
+<text x="1218" y="283" font-size="14" font-family="Consolas, monospace" fill="#c62828">'is approved and cannot be changed'</text>
+<use href="#xmark" x="1200" y="309"/><text x="1218" y="314" font-size="15" fill="#1e232d">Cannot be deleted</text>
+<text x="1218" y="333" font-size="14" fill="#5a6472">OnDelete: TestField Status = Draft</text>
+<text x="1218" y="352" font-size="14" font-family="Consolas, monospace" fill="#c62828">'Status must be equal to'</text>
+<use href="#xmark" x="1200" y="378"/><text x="1218" y="383" font-size="15" fill="#1e232d">Cannot be renamed</text>
+<text x="1218" y="402" font-size="14" fill="#5a6472">OnRename always errors</text>
+<text x="1218" y="421" font-size="14" font-family="Consolas, monospace" fill="#c62828">'cannot be renamed'</text>
+<use href="#xmark" x="1200" y="447"/><text x="1218" y="452" font-size="15" fill="#1e232d">Cannot be reopened</text>
+<text x="1218" y="471" font-size="14" fill="#5a6472">Reopen: TestField Status = Reviewed</text>
+<text x="1218" y="490" font-size="14" font-family="Consolas, monospace" fill="#c62828">'Status must be equal to'</text>
+
+<text x="1190" y="526" font-size="17" font-weight="bold" fill="#13294b">Its ledger entries (50102)</text>
+<use href="#xmark" x="1200" y="550"/><text x="1218" y="555" font-size="15" fill="#1e232d">Cannot be modified or deleted</text>
+<text x="1218" y="574" font-size="14" fill="#5a6472">Fix: post a correction in a later period</text>
+<text x="1218" y="593" font-size="14" font-family="Consolas, monospace" fill="#c62828">'belongs to approved statement'</text>
+
+<text x="1190" y="629" font-size="17" font-weight="bold" fill="#13294b">Audit entries (50104)</text>
+<use href="#xmark" x="1200" y="653"/><text x="1218" y="658" font-size="15" fill="#1e232d">Never changed, deleted or renamed</text>
+<text x="1218" y="677" font-size="14" fill="#5a6472">In any status; rows are only added</text>
+<text x="1218" y="696" font-size="14" font-family="Consolas, monospace" fill="#c62828">'cannot be changed or deleted'</text>
+
+<line x1="1190" y1="716" x2="1540" y2="716" stroke="#d5dde5" stroke-width="1.5"/>
+<text x="1190" y="744" font-size="17" font-weight="bold" fill="#2e7d32">Still allowed</text>
+<use href="#okmark" x="1200" y="769"/><text x="1218" y="774" font-size="15" fill="#1e232d">Create Accrual Journal Lines</text>
+<text x="1218" y="793" font-size="14" fill="#5a6472">Codeunit 50102 RYL Accrual Journal</text>
+
+<rect x="1190" y="812" width="350" height="132" rx="10" fill="#fdecea" stroke="#c62828" stroke-width="1.5"/>
+<text x="1204" y="836" font-size="15" font-weight="bold" fill="#c62828">Red text = what the test expects</text>
+<text x="1204" y="860" font-size="14" font-family="Consolas, monospace" fill="#1e232d">asserterror RoyaltyStatement.Modify(true);</text>
+<text x="1204" y="880" font-size="14" font-family="Consolas, monospace" fill="#1e232d">Assert.ExpectedError(</text>
+<text x="1204" y="900" font-size="14" font-family="Consolas, monospace" fill="#c62828" xml:space="preserve">  'is approved and cannot be changed');</text>
+<text x="1204" y="928" font-size="14" fill="#5a6472">Codeunit 50153 uses one text per rule.</text>
+</svg>

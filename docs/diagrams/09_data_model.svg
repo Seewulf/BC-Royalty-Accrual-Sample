@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="Segoe UI, Arial, sans-serif">
+<title>The tables and how they connect</title>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0e7c86"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="15" markerHeight="15" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5a6472"/></marker></defs>
+<rect x="0" y="0" width="1600" height="1000" fill="#ffffff"/>
+<text x="50" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="bold" fill="#13294b" text-anchor="start">The tables and how they connect</text>
+<text x="50" y="92" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="normal" fill="#5a6472" text-anchor="start">Each arrow points from a field back to the table it uses.</text>
+<rect x="70" y="198" width="280" height="118" rx="8" fill="#f4f5f7" stroke="#6b7684" stroke-width="2"/>
+<path d="M70,234 v-28 a8,8 0 0 1 8,-8 h264 a8,8 0 0 1 8,8 v28 z" fill="#6b7684"/>
+<text x="82" y="222" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">Vendor</text>
+<text x="338" y="222" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">standard</text>
+<text x="84" y="255" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e232d" text-anchor="start">No.</text>
+<text x="84" y="279" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Name</text>
+<text x="84" y="303" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#5a6472" text-anchor="start" font-style="italic">the licensor</text>
+<rect x="70" y="350" width="280" height="118" rx="8" fill="#f4f5f7" stroke="#6b7684" stroke-width="2"/>
+<path d="M70,386 v-28 a8,8 0 0 1 8,-8 h264 a8,8 0 0 1 8,8 v28 z" fill="#6b7684"/>
+<text x="82" y="374" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">Item</text>
+<text x="338" y="374" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">standard</text>
+<text x="84" y="407" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e232d" text-anchor="start">No.</text>
+<text x="84" y="431" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Description</text>
+<rect x="76" y="439" width="268" height="22" rx="4" fill="#fdf1dc" stroke="#e6961e" stroke-width="1.5"/>
+<text x="84" y="455" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">RYL Royalty Contract No.</text>
+<text x="336" y="455" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#9a5d00" text-anchor="end">ext 50100</text>
+<rect x="70" y="520" width="280" height="190" rx="8" fill="#f4f5f7" stroke="#6b7684" stroke-width="2"/>
+<path d="M70,556 v-28 a8,8 0 0 1 8,-8 h264 a8,8 0 0 1 8,8 v28 z" fill="#6b7684"/>
+<circle cx="92" cy="538" r="12" fill="#ffffff"/>
+<text x="92" y="543" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b7684" text-anchor="middle">1</text>
+<text x="112" y="544" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">Value Entry</text>
+<text x="338" y="544" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">standard</text>
+<text x="84" y="577" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e232d" text-anchor="start">Entry No.</text>
+<text x="84" y="601" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Item No.</text>
+<text x="84" y="625" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Document Type / Document No.</text>
+<text x="84" y="649" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Sales Amount (Actual)</text>
+<text x="84" y="673" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Invoiced Quantity</text>
+<text x="84" y="697" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Source No. (customer)</text>
+<rect x="450" y="174" width="340" height="190" rx="8" fill="#eef3f7" stroke="#13294b" stroke-width="2"/>
+<path d="M450,210 v-28 a8,8 0 0 1 8,-8 h324 a8,8 0 0 1 8,8 v28 z" fill="#13294b"/>
+<text x="462" y="198" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">RYL Royalty Contract</text>
+<text x="778" y="198" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">table 50101</text>
+<text x="464" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e232d" text-anchor="start">No.</text>
+<text x="464" y="255" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Licensor No.</text>
+<text x="464" y="279" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Royalty Rate %</text>
+<text x="464" y="303" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Starting Date / Ending Date</text>
+<text x="464" y="327" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Advance Amount (LCY)</text>
+<text x="464" y="351" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Blocked</text>
+<rect x="450" y="472" width="340" height="214" rx="8" fill="#eef3f7" stroke="#13294b" stroke-width="2"/>
+<path d="M450,508 v-28 a8,8 0 0 1 8,-8 h324 a8,8 0 0 1 8,8 v28 z" fill="#13294b"/>
+<circle cx="472" cy="490" r="12" fill="#ffffff"/>
+<text x="472" y="495" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#13294b" text-anchor="middle">2</text>
+<text x="492" y="496" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">RYL Royalty Ledger Entry</text>
+<text x="778" y="496" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">table 50102</text>
+<text x="464" y="529" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e232d" text-anchor="start">Entry No.</text>
+<text x="464" y="553" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Contract No.</text>
+<rect x="456" y="561" width="328" height="22" rx="4" fill="#e1f0f1" stroke="#0e7c86" stroke-width="1.5"/>
+<text x="464" y="577" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Value Entry No.</text>
+<text x="776" y="577" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#0e7c86" text-anchor="end">unique key</text>
+<text x="464" y="601" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Posting Date</text>
+<text x="464" y="625" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Sales Amount (LCY)</text>
+<text x="464" y="649" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Royalty Amount (LCY)</text>
+<text x="464" y="673" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Statement No.</text>
+<rect x="860" y="150" width="330" height="190" rx="8" fill="#eef3f7" stroke="#13294b" stroke-width="2"/>
+<path d="M860,186 v-28 a8,8 0 0 1 8,-8 h314 a8,8 0 0 1 8,8 v28 z" fill="#13294b"/>
+<circle cx="882" cy="168" r="12" fill="#ffffff"/>
+<text x="882" y="173" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#13294b" text-anchor="middle">3</text>
+<text x="902" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">RYL Royalty Statement</text>
+<text x="1178" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">table 50103</text>
+<text x="874" y="207" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e232d" text-anchor="start">No.</text>
+<text x="1176" y="207" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#5a6472" text-anchor="end">from Statement Nos.</text>
+<text x="874" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Contract No.</text>
+<text x="874" y="255" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Period Start / Period End</text>
+<text x="874" y="279" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Status: Draft, Reviewed, Approved</text>
+<text x="874" y="303" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Earned / Recouped / Payable Amount (LCY)</text>
+<text x="874" y="327" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Reviewed By / Approved By</text>
+<rect x="860" y="410" width="330" height="166" rx="8" fill="#eef3f7" stroke="#13294b" stroke-width="2"/>
+<path d="M860,446 v-28 a8,8 0 0 1 8,-8 h314 a8,8 0 0 1 8,8 v28 z" fill="#13294b"/>
+<text x="872" y="434" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">RYL Statement Audit Entry</text>
+<text x="1178" y="434" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">table 50104</text>
+<text x="874" y="467" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e232d" text-anchor="start">Entry No.</text>
+<text x="874" y="491" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Statement No.</text>
+<text x="874" y="515" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Old Status / New Status</text>
+<text x="874" y="539" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">User ID / Changed At</text>
+<text x="874" y="563" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#5a6472" text-anchor="start" font-style="italic">never modified or deleted</text>
+<rect x="860" y="630" width="330" height="142" rx="8" fill="#f4f5f7" stroke="#6b7684" stroke-width="2"/>
+<path d="M860,666 v-28 a8,8 0 0 1 8,-8 h314 a8,8 0 0 1 8,8 v28 z" fill="#6b7684"/>
+<text x="872" y="654" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">User Setup</text>
+<text x="1178" y="654" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">standard</text>
+<text x="874" y="687" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e232d" text-anchor="start">User ID</text>
+<rect x="866" y="695" width="318" height="22" rx="4" fill="#fdf1dc" stroke="#e6961e" stroke-width="1.5"/>
+<text x="874" y="711" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">RYL Royalty Approver</text>
+<text x="1176" y="711" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#9a5d00" text-anchor="end">ext 50101</text>
+<text x="874" y="735" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#5a6472" text-anchor="start" font-style="italic">Approve looks up the current user:</text>
+<text x="874" y="759" font-family="Consolas, monospace" font-size="14" font-weight="normal" fill="#5a6472" text-anchor="start">UserSetup.Get(UserId())</text>
+<rect x="860" y="860" width="330" height="94" rx="8" fill="#f4f5f7" stroke="#6b7684" stroke-width="2"/>
+<path d="M860,896 v-28 a8,8 0 0 1 8,-8 h314 a8,8 0 0 1 8,8 v28 z" fill="#6b7684"/>
+<circle cx="882" cy="878" r="12" fill="#ffffff"/>
+<text x="882" y="883" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b7684" text-anchor="middle">5</text>
+<text x="902" y="884" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">G/L Entry</text>
+<text x="1178" y="884" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">standard</text>
+<text x="874" y="917" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Document No. = statement No.</text>
+<text x="1176" y="917" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#5a6472" text-anchor="end">rule 3</text>
+<text x="874" y="941" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">G/L Account No. / Amount</text>
+<rect x="1265" y="150" width="275" height="94" rx="8" fill="#f4f5f7" stroke="#6b7684" stroke-width="2"/>
+<path d="M1265,186 v-28 a8,8 0 0 1 8,-8 h259 a8,8 0 0 1 8,8 v28 z" fill="#6b7684"/>
+<text x="1277" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">G/L Account</text>
+<text x="1528" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">standard</text>
+<text x="1279" y="207" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e232d" text-anchor="start">No.</text>
+<text x="1279" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Name</text>
+<rect x="1265" y="284" width="275" height="214" rx="8" fill="#eef3f7" stroke="#13294b" stroke-width="2"/>
+<path d="M1265,320 v-28 a8,8 0 0 1 8,-8 h259 a8,8 0 0 1 8,8 v28 z" fill="#13294b"/>
+<text x="1277" y="308" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">RYL Royalty Setup</text>
+<text x="1528" y="308" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">table 50100</text>
+<text x="1279" y="341" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Statement Nos.</text>
+<text x="1279" y="365" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Royalty Expense Account</text>
+<text x="1279" y="389" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Advance Paid Account</text>
+<text x="1279" y="413" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Accrued Royalties Account</text>
+<text x="1279" y="437" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Accrual Jnl. Template Name</text>
+<text x="1279" y="461" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Accrual Jnl. Batch Name</text>
+<text x="1279" y="485" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Last Processed Value Entry No.</text>
+<rect x="1265" y="536" width="275" height="166" rx="8" fill="#f4f5f7" stroke="#6b7684" stroke-width="2"/>
+<path d="M1265,572 v-28 a8,8 0 0 1 8,-8 h259 a8,8 0 0 1 8,8 v28 z" fill="#6b7684"/>
+<text x="1277" y="560" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">Gen. Journal Batch</text>
+<text x="1528" y="560" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">standard</text>
+<text x="1279" y="593" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e232d" text-anchor="start">Name</text>
+<text x="1279" y="617" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Bal. Account No.: blank</text>
+<text x="1279" y="641" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">No. Series: blank</text>
+<text x="1279" y="665" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Posting No. Series: blank</text>
+<text x="1279" y="689" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Copy VAT Setup to Jnl. Lines: false</text>
+<rect x="1265" y="740" width="275" height="166" rx="8" fill="#f4f5f7" stroke="#6b7684" stroke-width="2"/>
+<path d="M1265,776 v-28 a8,8 0 0 1 8,-8 h259 a8,8 0 0 1 8,8 v28 z" fill="#6b7684"/>
+<circle cx="1287" cy="758" r="12" fill="#ffffff"/>
+<text x="1287" y="763" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b7684" text-anchor="middle">4</text>
+<text x="1307" y="764" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="start">Gen. Journal Line</text>
+<text x="1528" y="764" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#dfe6ee" text-anchor="end">standard</text>
+<text x="1279" y="797" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Journal Batch Name</text>
+<text x="1279" y="821" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Document No.</text>
+<text x="1279" y="845" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Posting Date = Period End</text>
+<text x="1279" y="869" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Account No. (Setup accounts)</text>
+<text x="1279" y="893" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Amount</text>
+<path d="M70,596 H52 V402 H70" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M450,250 H350" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M350,450 H390 V400 H540 V364" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M450,572 H350" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M450,548 H422 V425 H680 V364" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M790,668 H825 V380 H930 V340" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M860,226 H790" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M1190,486 H1210 V380 H1110 V340" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M1540,360 H1552 M1540,384 H1552 M1540,408 H1552" fill="none" stroke="#0e7c86" stroke-width="2.5"/>
+<path d="M1552,408 V202 H1540" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M1540,456 H1556 V588 H1540" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M1265,792 H1248 V588 H1265" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M1265,816 H1230 V202 H1190" fill="none" stroke="#0e7c86" stroke-width="2.5" stroke-dasharray="7,5" marker-end="url(#ah)"/>
+<path d="M1265,878 H1190" fill="none" stroke="#5a6472" stroke-width="4" marker-end="url(#ag)"/>
+<text x="1227" y="866" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#5a6472" text-anchor="middle">Post</text>
+<rect x="40" y="790" width="750" height="140" rx="8" fill="#fdf1dc" stroke="#e6961e" stroke-width="2"/>
+<text x="56" y="820" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#13294b" text-anchor="start">Rules the tables enforce</text>
+<circle cx="68" cy="845" r="11" fill="#e6961e"/>
+<text x="68" y="850" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="88" y="850" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Value Entry No. is a unique key: one value entry, at most one royalty entry.</text>
+<circle cx="68" cy="873" r="11" fill="#e6961e"/>
+<text x="68" y="878" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="88" y="878" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Entries on an Approved statement cannot be modified or deleted.</text>
+<circle cx="68" cy="901" r="11" fill="#e6961e"/>
+<text x="68" y="906" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text x="88" y="906" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Accrual stops if a G/L Entry already has Document No. = statement no.</text>
+<rect x="760" y="52" width="22" height="18" rx="3" fill="#f4f5f7" stroke="#6b7684" stroke-width="2.5"/>
+<text x="790" y="67" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Standard BC table</text>
+<rect x="940" y="52" width="22" height="18" rx="3" fill="#eef3f7" stroke="#13294b" stroke-width="2.5"/>
+<text x="970" y="67" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Our table</text>
+<rect x="1060" y="52" width="22" height="18" rx="3" fill="#fdf1dc" stroke="#e6961e" stroke-width="2.5"/>
+<text x="1090" y="67" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">Our field on a std table</text>
+<circle cx="1271" cy="61" r="12" fill="#13294b"/>
+<text x="1271" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="1291" y="67" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">reading order 1 to 5</text>
+<line x1="760" y1="96" x2="800" y2="96" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="810" y="101" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">field relates to that table</text>
+<line x1="1010" y1="96" x2="1050" y2="96" stroke="#0e7c86" stroke-width="2.5" stroke-dasharray="7,5" marker-end="url(#ah)"/>
+<text x="1060" y="101" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">same value, no table relation</text>
+<line x1="1290" y1="96" x2="1330" y2="96" stroke="#5a6472" stroke-width="4" marker-end="url(#ag)"/>
+<text x="1340" y="101" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1e232d" text-anchor="start">posting creates entries</text>
+</svg>

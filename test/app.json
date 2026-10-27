@@ -2,7 +2,7 @@
   "id": "4b00a5b6-cf79-4a74-99bb-9f5d6efac9f6",
   "name": "Royalty Accrual Sample Tests",
   "publisher": "Prabin Bhusal",
-  "version": "1.0.0.0",
+  "version": "1.0.0.1",
   "brief": "Automated tests for Royalty Accrual Sample.",
   "description": "Tests for the royalty sample: calculation, credit memos, advance recoupment, approval and accrual lines. Only needs Library Assert, so it runs on a normal online sandbox.",
   "dependencies": [

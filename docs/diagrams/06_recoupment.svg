@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="Segoe UI, Arial, sans-serif">
+  <title>Recoupment: how the advance is used up</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0e7c86"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1600" height="1000" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="50" y="60" font-size="34" font-weight="bold" fill="#13294b">Recoupment: how the advance is used up</text>
+  <text x="50" y="92" font-size="18" fill="#5a6472">The licensor was paid an advance up front. Royalty earned first pays that back; only the rest is new cash.</text>
+
+  <!-- Formula boxes -->
+  <g>
+    <rect x="50" y="125" width="340" height="205" rx="10" fill="#eef3f7" stroke="#13294b" stroke-width="2"/>
+    <circle cx="80" cy="159" r="16" fill="#0e7c86"/>
+    <text x="80" y="165" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="106" y="166" font-size="20" font-weight="bold" fill="#13294b">Earned so far</text>
+    <text x="74" y="210" font-size="16" fill="#1e232d">Earned on Approved statements</text>
+    <text x="74" y="236" font-size="16" fill="#1e232d">+ Earned on this statement</text>
+    <text x="74" y="292" font-size="15" fill="#5a6472">Draft and Reviewed statements</text>
+    <text x="74" y="312" font-size="15" fill="#5a6472">of the contract do not count</text>
+
+    <rect x="435" y="125" width="340" height="205" rx="10" fill="#eef3f7" stroke="#13294b" stroke-width="2"/>
+    <circle cx="465" cy="159" r="16" fill="#0e7c86"/>
+    <text x="465" y="165" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="491" y="166" font-size="20" font-weight="bold" fill="#13294b">Total recouped (capped)</text>
+    <text x="459" y="210" font-size="16" fill="#1e232d">= step 1, but never above the</text>
+    <text x="459" y="236" font-size="16" fill="#1e232d">contract's Advance Amount (LCY)</text>
+    <text x="459" y="262" font-size="16" fill="#1e232d">and never below 0</text>
+    <text x="459" y="312" font-size="15" fill="#5a6472">You cannot recoup more than you paid</text>
+
+    <rect x="820" y="125" width="340" height="205" rx="10" fill="#eef3f7" stroke="#13294b" stroke-width="2"/>
+    <circle cx="850" cy="159" r="16" fill="#0e7c86"/>
+    <text x="850" y="165" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="876" y="166" font-size="20" font-weight="bold" fill="#13294b">This statement recoups</text>
+    <text x="844" y="210" font-size="16" fill="#1e232d">= step 2 minus what Approved</text>
+    <text x="844" y="236" font-size="16" fill="#1e232d">statements already recouped</text>
+    <text x="844" y="266" font-size="15" fill="#0e7c86" font-family="Consolas, monospace">"Recouped Amount (LCY)"</text>
+    <text x="844" y="292" font-size="15" fill="#5a6472">Negative when a credit pulls earned</text>
+    <text x="844" y="312" font-size="15" fill="#5a6472">so far back under the advance</text>
+
+    <rect x="1205" y="125" width="340" height="205" rx="10" fill="#eef3f7" stroke="#13294b" stroke-width="2"/>
+    <circle cx="1235" cy="159" r="16" fill="#0e7c86"/>
+    <text x="1235" y="165" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="1261" y="166" font-size="20" font-weight="bold" fill="#13294b">Payable (new cash)</text>
+    <text x="1229" y="210" font-size="16" fill="#1e232d">= Earned - Recouped</text>
+    <text x="1229" y="236" font-size="16" fill="#1e232d">of this statement</text>
+    <text x="1229" y="266" font-size="15" fill="#c27400" font-family="Consolas, monospace">"Payable Amount (LCY)"</text>
+    <text x="1229" y="292" font-size="15" fill="#5a6472">Can be negative after a credit</text>
+    <text x="1229" y="312" font-size="15" fill="#5a6472">once the advance is used up</text>
+
+    <line x1="392" y1="220" x2="431" y2="220" stroke="#0e7c86" stroke-width="3" marker-end="url(#arr)"/>
+    <line x1="777" y1="220" x2="816" y2="220" stroke="#0e7c86" stroke-width="3" marker-end="url(#arr)"/>
+    <line x1="1162" y1="220" x2="1201" y2="220" stroke="#0e7c86" stroke-width="3" marker-end="url(#arr)"/>
+
+    <text x="800" y="356" font-size="15" fill="#5a6472" text-anchor="middle">Code: local procedure <tspan font-family="Consolas, monospace" fill="#13294b">CalcRecoupment</tspan> in codeunit 50101 "RYL Statement Management". It runs in Recalculate, and again in Approve as a check.</text>
+  </g>
+
+  <line x1="50" y1="374" x2="1550" y2="374" stroke="#d5dbe1" stroke-width="1.5"/>
+
+  <!-- Middle: worked example -->
+  <text x="50" y="408" font-size="22" font-weight="bold" fill="#13294b">Worked example: advance 20,000, royalty 8%</text>
+
+  <!-- advance line -->
+  <line x1="1080" y1="430" x2="1080" y2="608" stroke="#13294b" stroke-width="2.5" stroke-dasharray="8,5"/>
+  <text x="1080" y="420" font-size="16" font-weight="bold" fill="#13294b" text-anchor="middle">Advance 20,000</text>
+
+  <!-- Row 1 -->
+  <text x="60" y="466" font-size="18" font-weight="bold" fill="#13294b">Period 1</text>
+  <text x="60" y="489" font-size="15" fill="#5a6472">sales 150,000, earned 12,000</text>
+  <rect x="330" y="445" width="450" height="56" fill="#0e7c86"/>
+  <text x="555" y="479" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">12,000 recouped</text>
+  <rect x="780" y="445" width="300" height="56" fill="#d5dbe1"/>
+  <text x="930" y="479" font-size="16" fill="#1e232d" text-anchor="middle">8,000 not used yet</text>
+  <text x="1270" y="466" font-size="16" fill="#0e7c86" font-weight="bold">Recouped 12,000</text>
+  <text x="1270" y="489" font-size="16" fill="#c27400" font-weight="bold">Payable 0</text>
+
+  <!-- Row 2 -->
+  <text x="60" y="566" font-size="18" font-weight="bold" fill="#13294b">Period 2</text>
+  <text x="60" y="589" font-size="15" fill="#5a6472">sales 150,000, earned 12,000</text>
+  <rect x="330" y="545" width="450" height="56" fill="#e1f0f1" stroke="#0e7c86" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="555" y="579" font-size="15" fill="#0e7c86" text-anchor="middle">12,000 already used in Period 1</text>
+  <rect x="780" y="545" width="300" height="56" fill="#0e7c86"/>
+  <text x="930" y="579" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">8,000 recouped</text>
+  <rect x="1080" y="545" width="150" height="56" fill="#e6961e"/>
+  <text x="1155" y="579" font-size="15" font-weight="bold" fill="#1e232d" text-anchor="middle">4,000 payable</text>
+  <text x="1270" y="566" font-size="16" fill="#0e7c86" font-weight="bold">Recouped 8,000</text>
+  <text x="1270" y="589" font-size="16" fill="#c27400" font-weight="bold">Payable 4,000</text>
+
+  <!-- Legend for the bars -->
+  <g font-size="15" fill="#1e232d">
+    <text x="60" y="633" font-weight="bold" fill="#13294b">Legend</text>
+    <rect x="330" y="618" width="20" height="20" fill="#0e7c86"/>
+    <text x="358" y="633">Recouped: uses the advance</text>
+    <rect x="590" y="618" width="20" height="20" fill="#e6961e"/>
+    <text x="618" y="633">Payable: new cash</text>
+    <rect x="790" y="618" width="20" height="20" fill="#d5dbe1"/>
+    <text x="818" y="633">Advance not used yet</text>
+    <rect x="1010" y="618" width="20" height="20" fill="#e1f0f1" stroke="#0e7c86" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="1038" y="633">Recouped in an earlier period</text>
+  </g>
+
+  <text x="330" y="662" font-size="15" fill="#5a6472">Checked by test <tspan font-family="Consolas, monospace" fill="#13294b">AdvanceIsRecoupedBeforeAnythingIsPayable</tspan> (codeunit 50152). Advance left after Period 1: 8,000.</text>
+
+  <line x1="50" y1="678" x2="1550" y2="678" stroke="#d5dbe1" stroke-width="1.5"/>
+
+  <!-- Bottom: credit case -->
+  <text x="50" y="710" font-size="22" font-weight="bold" fill="#13294b">Credit case: a period with a net credit gives advance back</text>
+
+  <rect x="50" y="726" width="1040" height="40" fill="#13294b"/>
+  <g font-size="16" font-weight="bold" fill="#ffffff">
+    <text x="66" y="752">Period</text>
+    <text x="260" y="752" text-anchor="end">Earned</text>
+    <text x="390" y="752" text-anchor="end">Recouped</text>
+    <text x="510" y="752" text-anchor="end">Payable</text>
+    <text x="700" y="752" text-anchor="end">Left after approval</text>
+    <text x="730" y="752">What happens</text>
+  </g>
+  <rect x="50" y="766" width="1040" height="44" fill="#eef3f7"/>
+  <rect x="50" y="810" width="1040" height="44" fill="#ffffff"/>
+  <rect x="50" y="854" width="1040" height="44" fill="#eef3f7"/>
+  <rect x="50" y="726" width="1040" height="172" fill="none" stroke="#13294b" stroke-width="1.5"/>
+  <g font-size="16" fill="#1e232d">
+    <text x="66" y="794" font-weight="bold">Period 1</text>
+    <text x="260" y="794" text-anchor="end">12,000</text>
+    <text x="390" y="794" text-anchor="end" fill="#0e7c86" font-weight="bold">12,000</text>
+    <text x="510" y="794" text-anchor="end" fill="#c27400" font-weight="bold">0</text>
+    <text x="700" y="794" text-anchor="end">8,000</text>
+    <text x="730" y="794">Sales 150,000. All 12,000 recouped.</text>
+
+    <text x="66" y="838" font-weight="bold">Period 2</text>
+    <text x="260" y="838" text-anchor="end">-2,000</text>
+    <text x="390" y="838" text-anchor="end" fill="#0e7c86" font-weight="bold">-2,000</text>
+    <text x="510" y="838" text-anchor="end" fill="#c27400" font-weight="bold">0</text>
+    <text x="700" y="838" text-anchor="end">10,000</text>
+    <text x="730" y="838">Credit 25,000. Gives 2,000 back.</text>
+
+    <text x="66" y="882" font-weight="bold">Period 3</text>
+    <text x="260" y="882" text-anchor="end">12,000</text>
+    <text x="390" y="882" text-anchor="end" fill="#0e7c86" font-weight="bold">10,000</text>
+    <text x="510" y="882" text-anchor="end" fill="#c27400" font-weight="bold">2,000</text>
+    <text x="700" y="882" text-anchor="end">0</text>
+    <text x="704" y="882">*</text>
+    <text x="730" y="882">Sales 150,000. Rest of advance used.</text>
+  </g>
+  <text x="50" y="928" font-size="15" fill="#5a6472">Checked by test <tspan font-family="Consolas, monospace" fill="#13294b">CreditPeriodGivesAdvanceBack</tspan> (codeunit 50152). Periods 1 and 2 are approved before the next one starts.</text>
+  <text x="50" y="952" font-size="15" fill="#5a6472">* Period 3 is only created (Draft) in the test. Its 0 assumes it is approved, because only Approved statements use up the advance.</text>
+
+  <!-- Side note: advance already used up -->
+  <rect x="1130" y="726" width="420" height="172" rx="10" fill="#fdf1dc" stroke="#e6961e" stroke-width="2"/>
+  <text x="1154" y="756" font-size="18" font-weight="bold" fill="#13294b">When Payable goes negative</text>
+  <text x="1154" y="784" font-size="15" fill="#1e232d">Advance 20,000 already fully used.</text>
+  <text x="1154" y="806" font-size="15" fill="#1e232d">Approved statements earned 30,000,</text>
+  <text x="1154" y="828" font-size="15" fill="#1e232d">this statement earns -2,000.</text>
+  <text x="1154" y="856" font-size="16" font-weight="bold" fill="#1e232d">Recouped 0, Payable -2,000</text>
+  <text x="1154" y="882" font-size="15" fill="#5a6472">It reduces what is owed. Not in the tests.</text>
+</svg>
